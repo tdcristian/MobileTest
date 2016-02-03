@@ -1,6 +1,6 @@
 package Core;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -17,5 +17,9 @@ public abstract class Element extends Base {
     public abstract void click();
 
     public abstract String getText();
+
+    public abstract void toBeVisible(int timeout);
+
+    public abstract void toBeInvisible(int timeout);
 
 }

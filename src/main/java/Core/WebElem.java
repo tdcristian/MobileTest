@@ -29,4 +29,14 @@ public class WebElem extends Element {
     public String getText() {
         return null;
     }
+
+    @Override
+    public void toBeVisible(int timeout) {
+
+    }
+
+    @Override
+    public void toBeInvisible(int timeout) {
+
+    }
 }

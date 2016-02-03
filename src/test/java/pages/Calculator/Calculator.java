@@ -19,9 +19,11 @@ public class Calculator {
     }
 
     public void addNumbers(Element five, Element four) {
+        this.five.toBeVisible(10);
         this.five.click();
         this.plus.click();
         this.four.click();
         this.equals.click();
+
     }
 }

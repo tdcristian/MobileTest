@@ -3,13 +3,13 @@ package Core;
 import io.appium.java_client.AppiumDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
-import org.testng.*;
+import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 /**

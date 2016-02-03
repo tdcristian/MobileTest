@@ -2,7 +2,6 @@ package AppTests;
 
 import Core.Base;
 import Core.Listener;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import pages.Calculator.Calculator;
 
 import java.io.IOException;
 
@@ -22,8 +22,6 @@ import java.io.IOException;
 
 @Listeners({Listener.class})
 public class AppTest extends Base {
-
-    AndroidDriver driver;
 
     @BeforeClass
     public void setUp() throws IOException {
@@ -36,9 +34,9 @@ public class AppTest extends Base {
         caps.setCapability("avd","AVD_for_Nexus_5_API22");
         caps.setCapability(MobileCapabilityType.APP_PACKAGE,"com.android.calculator2");
         caps.setCapability(MobileCapabilityType.APP_ACTIVITY,"com.android.calculator2.Calculator");
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         setDriver(caps);
 
+        Base.implicitWait(30);
 
     }
 
@@ -50,21 +48,14 @@ public class AppTest extends Base {
 
     @Test
     public void testApplication(){
-        WebElement five = getDriver().findElement(By.name("5"));
-        five.click();
+        logger.info("Test testApplication started");
 
-        WebElement plus = getDriver().findElement(By.name("+"));
-        plus.click();
+        Calculator calculator = new Calculator();
+        calculator.addNumbers(calculator.five,calculator.four);
 
-        WebElement four = getDriver().findElement(By.name("4"));
-        four.click();
-
-        WebElement equalTo = getDriver().findElementByAccessibilityId("equals");
-        equalTo.click();
-
-        WebElement value = getDriver().findElement(By.id("com.android.calculator2:id/formula"));
-        Assert.assertEquals(value.getText(),"91");
+        Assert.assertEquals(calculator.value.getText(),"9");
         logger.info("Test passed!!!");
     }
+
 
 }

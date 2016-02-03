@@ -17,6 +17,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Enumeration;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by tescu on 2/1/16.
@@ -45,6 +46,10 @@ public abstract class Base {
         java.util.Date date = new java.util.Date();
         String dateStr = dateFormat.format(date);
         return dateStr;
+    }
+
+    protected static void implicitWait(int seconds){
+        getDriver().manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
     }
 
     @BeforeClass

@@ -10,16 +10,12 @@ import java.util.List;
  */
 public abstract class Element extends Base {
 
-    public abstract WebElement element(By locator);
-
-    public abstract List<WebElement> elements(By locator);
-
     public abstract void click();
 
     public abstract String getText();
 
-    public abstract void toBeVisible(int timeout);
+    public abstract void waitToBeVisible(int timeout);
 
-    public abstract void toBeInvisible(int timeout);
+    public abstract void waitToBeInvisible(int timeout);
 
 }

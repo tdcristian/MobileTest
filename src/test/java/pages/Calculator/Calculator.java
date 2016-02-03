@@ -9,17 +9,17 @@ import org.openqa.selenium.By;
  */
 public class Calculator {
 
-    public Element five = new NativeElem(By.name("5"),"five");
-    public Element plus = new NativeElem(By.name("+"),"plus");
-    public Element four = new NativeElem(By.name("4"),"four");
-    public Element equals = new NativeElem("equals","Equal");
-    public Element value = new NativeElem(By.id("com.android.calculator2:id/formula"),"value");
+    public NativeElem five = new NativeElem(By.name("5"),"five");
+    public NativeElem plus = new NativeElem(By.name("+"),"plus");
+    public NativeElem four = new NativeElem(By.name("4"),"four");
+    public NativeElem equals = new NativeElem("equals","Equal");
+    public NativeElem value = new NativeElem(By.id("com.android.calculator2:id/formula"),"value");
 
     public Calculator() {
     }
 
     public void addNumbers(Element five, Element four) {
-        this.five.toBeVisible(10);
+        this.five.waitToBeVisible(10);
         this.five.click();
         this.plus.click();
         this.four.click();

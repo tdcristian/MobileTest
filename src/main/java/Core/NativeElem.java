@@ -29,19 +29,6 @@ public class NativeElem extends Element {
         this.logName = logName;
     }
 
-
-    @Override
-    public WebElement element(By locator) {
-
-        return getDriver().findElement(locator);
-    }
-
-    @Override
-    public List<WebElement> elements(By locator) {
-
-        return getDriver().findElements(locator);
-    }
-
     @Override
     public void click() {
         try {
@@ -64,23 +51,31 @@ public class NativeElem extends Element {
         return elem;
     }
 
+    /**
+     * wait for the element to be visible
+     * @param timeout - seconds
+     */
     @Override
-    public void toBeVisible(int timeout) {
+    public void waitToBeVisible(int timeout) {
         try {
-            logger.info("Execute: toBeVisible("+logName+")");
+            logger.info("Execute: waitToBeVisible("+logName+")");
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.presenceOfElementLocated(locator));
         }catch (Exception ex){
-            logger.info("Fail to execute: toBeVisible("+logName+")");
+            logger.info("Fail to execute: waitToBeVisible("+logName+")");
         }
     }
 
+    /**
+     * wait for the element to be invisible
+     * @param timeout - seconds
+     */
     @Override
-    public void toBeInvisible(int timeout) {
+    public void waitToBeInvisible(int timeout) {
         try {
-            logger.info("Execute: toBeInvisible("+logName+")");
+            logger.info("Execute: waitToBeInvisible("+logName+")");
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.invisibilityOfElementLocated(locator));
         }catch (Exception ex){
-            logger.info("Fail to execute: toBeInvisible("+logName+")");
+            logger.info("Fail to execute: waitToBeInvisible("+logName+")");
         }
     }
 

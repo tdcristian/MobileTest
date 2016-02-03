@@ -1,6 +1,7 @@
 package Core;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
@@ -10,14 +11,14 @@ import java.util.List;
 public class WebElem extends Element {
 
 
-    @Override
-    public org.openqa.selenium.WebElement element(By locator) {
-        return null;
+    public WebElement element(By locator) {
+
+        return getDriver().findElement(locator);
     }
 
-    @Override
-    public List<org.openqa.selenium.WebElement> elements(By locator) {
-        return null;
+    public List<WebElement> elements(By locator) {
+
+        return getDriver().findElements(locator);
     }
 
     @Override
@@ -31,12 +32,12 @@ public class WebElem extends Element {
     }
 
     @Override
-    public void toBeVisible(int timeout) {
+    public void waitToBeVisible(int timeout) {
 
     }
 
     @Override
-    public void toBeInvisible(int timeout) {
+    public void waitToBeInvisible(int timeout) {
 
     }
 }

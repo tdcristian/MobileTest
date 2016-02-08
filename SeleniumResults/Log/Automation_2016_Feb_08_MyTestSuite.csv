@@ -11,3 +11,31 @@
 08 Feb 2016 11:54:13:196; Success testing method: testApplication
 08 Feb 2016 11:54:13:197; $$$$ Test ended! $$$$
 08 Feb 2016 11:54:13:197; ----------------------------------------------------------------------------
+08 Feb 2016 12:08:27:633; ----------------------------------------------------------------------------
+08 Feb 2016 12:08:32:561; Start test method: testApplication
+08 Feb 2016 12:08:32:564; Test started on localhost.localdomain
+08 Feb 2016 12:08:32:565; Test testApplication started
+08 Feb 2016 12:08:35:082; Execute: waitToBeVisible(five)
+08 Feb 2016 12:08:35:132; Execute: click(five)
+08 Feb 2016 12:08:35:401; Execute: click(plus)
+08 Feb 2016 12:08:36:155; Execute: click(four)
+08 Feb 2016 12:08:36:943; Execute: click(Equal)
+08 Feb 2016 12:08:37:569; Execute: getText(value)
+08 Feb 2016 12:08:38:618; Test passed!!!
+08 Feb 2016 12:08:38:620; Success testing method: testApplication
+08 Feb 2016 12:08:38:623; $$$$ Test ended! $$$$
+08 Feb 2016 12:08:38:623; ----------------------------------------------------------------------------
+08 Feb 2016 12:09:56:703; ----------------------------------------------------------------------------
+08 Feb 2016 12:10:01:165; Test started on localhost.localdomain machine
+08 Feb 2016 12:10:01:165; Start test method: testApplication
+08 Feb 2016 12:10:01:166; Test testApplication started
+08 Feb 2016 12:10:03:301; Execute: waitToBeVisible(five)
+08 Feb 2016 12:10:03:331; Execute: click(five)
+08 Feb 2016 12:10:03:589; Execute: click(plus)
+08 Feb 2016 12:10:04:377; Execute: click(four)
+08 Feb 2016 12:10:05:167; Execute: click(Equal)
+08 Feb 2016 12:10:05:817; Execute: getText(value)
+08 Feb 2016 12:10:07:017; Test passed!!!
+08 Feb 2016 12:10:07:018; Success testing method: testApplication
+08 Feb 2016 12:10:07:019; $$$$ Test ended! $$$$
+08 Feb 2016 12:10:07:019; ----------------------------------------------------------------------------

@@ -9,6 +9,7 @@ import org.testng.ITestResult;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,6 +20,11 @@ import java.util.Date;
 public class Listener extends Base implements ITestListener {
 
     public void onTestStart(ITestResult iTestResult) {
+        try {
+            logger.info("Test started on "+getMachineName()+" machine");
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
         logger.info("Start test method: "+iTestResult.getMethod().getMethodName());
     }
 

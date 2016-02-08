@@ -25,15 +25,15 @@ public class Listener extends Base implements ITestListener {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        logger.info("Start test method: "+iTestResult.getMethod().getMethodName());
+        logger.info(">Start test method: "+iTestResult.getMethod().getMethodName());
     }
 
     public void onTestSuccess(ITestResult iTestResult) {
-        logger.info("Success testing method: "+iTestResult.getMethod().getMethodName());
+        logger.info(">Success testing method: "+iTestResult.getMethod().getMethodName());
     }
 
     public void onTestFailure(ITestResult iTestResult) {
-        logger.info("TestFail: "+iTestResult.getMethod().getMethodName());
+        logger.info(">TestFail: "+iTestResult.getMethod().getMethodName());
         AppiumDriver driver = Base.getDriver();
         File location = new File("Screenshots");
         DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");

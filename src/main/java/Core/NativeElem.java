@@ -67,6 +67,26 @@ public class NativeElem extends Element {
         return elem;
     }
 
+    @Override
+    public void sendKeys(String text) {
+        try {
+            logger.info("Execute: sendKeys("+logName+")");
+            element.sendKeys(text);
+        }catch (Exception ex){
+            logger.info("Fail to execute: sendKeys("+logName+")");
+        }
+    }
+
+    @Override
+    public void sendKeys(Keys key) {
+        try {
+            logger.info("Execute: sendKeys("+logName+")");
+            element.sendKeys(key);
+        }catch (Exception ex){
+            logger.info("Fail to execute: sendKeys("+logName+")");
+        }
+    }
+
     /**
      * wait for the element to be visible
      * @param timeout - seconds

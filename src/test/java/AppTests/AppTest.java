@@ -46,13 +46,11 @@ public class AppTest extends Base {
 
     @Test
     public void testApplication(){
-        logger.info("Test testApplication started");
 
         Calculator calculator = new Calculator();
         calculator.addNumbers(calculator.five,calculator.four);
 
         Assert.assertEquals(calculator.value.getText(),"9");
-        logger.info("Test passed!!!");
     }
 
 

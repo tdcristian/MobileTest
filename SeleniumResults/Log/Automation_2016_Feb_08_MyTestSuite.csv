@@ -39,3 +39,280 @@
 08 Feb 2016 12:10:07:018; Success testing method: testApplication
 08 Feb 2016 12:10:07:019; $$$$ Test ended! $$$$
 08 Feb 2016 12:10:07:019; ----------------------------------------------------------------------------
+08 Feb 2016 16:28:04:131; ----------------------------------------------------------------------------
+08 Feb 2016 16:28:16:210; Test started on localhost.localdomain machine
+08 Feb 2016 16:28:16:211; Start test method: testGooglePage
+08 Feb 2016 16:28:16:212; Test testGooglePage() started
+08 Feb 2016 16:28:33:929; Test testGooglePage() finished
+08 Feb 2016 16:28:33:931; Success testing method: testGooglePage
+08 Feb 2016 17:47:01:642; ----------------------------------------------------------------------------
+08 Feb 2016 17:47:06:504; Test started on localhost.localdomain machine
+08 Feb 2016 17:47:06:506; >Start test method: testGooglePage
+08 Feb 2016 17:48:21:492; ----------------------------------------------------------------------------
+08 Feb 2016 17:48:26:220; Test started on localhost.localdomain machine
+08 Feb 2016 17:48:26:221; >Start test method: testGooglePage
+08 Feb 2016 17:49:47:666; ----------------------------------------------------------------------------
+08 Feb 2016 17:49:56:122; Test started on localhost.localdomain machine
+08 Feb 2016 17:49:56:122; >Start test method: testGooglePage
+08 Feb 2016 17:50:01:380; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 17:50:01:577; Fail to execute: waitToBeVisible(searchBox)
+08 Feb 2016 17:50:01:577; Execute: sendKeys(searchBox)
+08 Feb 2016 17:50:01:691; Fail to execute: sendKeys(searchBox)
+08 Feb 2016 17:50:01:697; Execute: sendKeys(searchBox)
+08 Feb 2016 17:50:01:731; Fail to execute: sendKeys(searchBox)
+08 Feb 2016 17:50:01:733; >Success testing method: testGooglePage
+08 Feb 2016 17:51:33:636; ----------------------------------------------------------------------------
+08 Feb 2016 17:51:38:859; Test started on localhost.localdomain machine
+08 Feb 2016 17:51:38:860; >Start test method: testGooglePage
+08 Feb 2016 18:03:25:060; ----------------------------------------------------------------------------
+08 Feb 2016 18:03:33:399; Test started on localhost.localdomain machine
+08 Feb 2016 18:03:33:400; >Start test method: testEBayPage
+08 Feb 2016 18:04:05:367; >TestFail: testEBayPage
+08 Feb 2016 18:09:44:601; ----------------------------------------------------------------------------
+08 Feb 2016 18:09:58:649; Test started on localhost.localdomain machine
+08 Feb 2016 18:09:58:650; >Start test method: testEBayPage
+08 Feb 2016 18:10:28:728; >TestFail: testEBayPage
+08 Feb 2016 18:14:41:175; ----------------------------------------------------------------------------
+08 Feb 2016 18:14:54:935; Test started on localhost.localdomain machine
+08 Feb 2016 18:14:54:935; >Start test method: testEBayPage
+08 Feb 2016 18:15:25:038; >TestFail: testEBayPage
+08 Feb 2016 18:23:59:429; ----------------------------------------------------------------------------
+08 Feb 2016 18:24:07:623; Test started on localhost.localdomain machine
+08 Feb 2016 18:24:07:624; >Start test method: testEBayPage
+08 Feb 2016 18:24:39:633; >TestFail: testEBayPage
+08 Feb 2016 18:25:08:122; >TestFail: testEBayPage
+08 Feb 2016 18:33:06:330; ----------------------------------------------------------------------------
+08 Feb 2016 18:33:38:680; Test started on localhost.localdomain machine
+08 Feb 2016 18:33:38:681; >Start test method: testEBayPage
+08 Feb 2016 18:35:30:332; ----------------------------------------------------------------------------
+08 Feb 2016 18:35:35:605; Test started on localhost.localdomain machine
+08 Feb 2016 18:35:35:605; >Start test method: testApplication
+08 Feb 2016 18:35:37:671; Execute: waitToBeVisible(five)
+08 Feb 2016 18:35:37:738; Execute: click(five)
+08 Feb 2016 18:35:37:946; Execute: click(plus)
+08 Feb 2016 18:35:38:924; Execute: click(four)
+08 Feb 2016 18:35:39:691; Execute: click(Equal)
+08 Feb 2016 18:35:40:916; Execute: getText(value)
+08 Feb 2016 18:35:42:155; >Success testing method: testApplication
+08 Feb 2016 18:35:42:157; $$$$ Test ended! $$$$
+08 Feb 2016 18:35:42:157; ----------------------------------------------------------------------------
+08 Feb 2016 18:51:15:953; ----------------------------------------------------------------------------
+08 Feb 2016 18:51:29:963; Test started on localhost.localdomain machine
+08 Feb 2016 18:51:29:964; >Start test method: testEBayPage
+08 Feb 2016 18:52:00:077; >TestFail: testEBayPage
+08 Feb 2016 20:19:19:769; ----------------------------------------------------------------------------
+08 Feb 2016 20:19:19:794; Test started on localhost.localdomain machine
+08 Feb 2016 20:19:19:794; >Start test method: testEBayPage
+08 Feb 2016 20:20:01:888; >TestFail: testEBayPage
+08 Feb 2016 20:32:15:643; ----------------------------------------------------------------------------
+08 Feb 2016 20:32:28:109; Test started on localhost.localdomain machine
+08 Feb 2016 20:32:28:110; >Start test method: testEBayPage
+08 Feb 2016 20:34:03:669; ----------------------------------------------------------------------------
+08 Feb 2016 20:34:16:590; Test started on localhost.localdomain machine
+08 Feb 2016 20:34:16:591; >Start test method: testEBayPage
+08 Feb 2016 20:34:29:942; >Success testing method: testEBayPage
+08 Feb 2016 20:37:46:648; ----------------------------------------------------------------------------
+08 Feb 2016 20:37:59:668; Test started on localhost.localdomain machine
+08 Feb 2016 20:37:59:669; >Start test method: testEBayPage
+08 Feb 2016 20:38:15:993; >Success testing method: testEBayPage
+08 Feb 2016 20:39:49:916; ----------------------------------------------------------------------------
+08 Feb 2016 20:39:54:482; Test started on localhost.localdomain machine
+08 Feb 2016 20:39:54:483; >Start test method: testEBayPage
+08 Feb 2016 20:40:44:189; ----------------------------------------------------------------------------
+08 Feb 2016 20:40:48:489; Test started on localhost.localdomain machine
+08 Feb 2016 20:40:48:490; >Start test method: testEBayPage
+08 Feb 2016 20:41:19:938; ----------------------------------------------------------------------------
+08 Feb 2016 20:41:24:809; Test started on localhost.localdomain machine
+08 Feb 2016 20:41:24:810; >Start test method: testEBayPage
+08 Feb 2016 20:42:23:616; ----------------------------------------------------------------------------
+08 Feb 2016 20:42:35:059; Test started on localhost.localdomain machine
+08 Feb 2016 20:42:35:060; >Start test method: testEBayPage
+08 Feb 2016 20:42:48:119; >Success testing method: testEBayPage
+08 Feb 2016 20:44:11:262; ----------------------------------------------------------------------------
+08 Feb 2016 20:44:16:061; Test started on localhost.localdomain machine
+08 Feb 2016 20:44:16:062; >Start test method: testEBayPage
+08 Feb 2016 20:44:41:683; ----------------------------------------------------------------------------
+08 Feb 2016 20:44:45:935; Test started on localhost.localdomain machine
+08 Feb 2016 20:44:45:936; >Start test method: testEBayPage
+08 Feb 2016 20:45:21:742; ----------------------------------------------------------------------------
+08 Feb 2016 20:45:25:958; Test started on localhost.localdomain machine
+08 Feb 2016 20:45:25:958; >Start test method: testEBayPage
+08 Feb 2016 20:45:54:503; ----------------------------------------------------------------------------
+08 Feb 2016 20:45:56:355; Test started on localhost.localdomain machine
+08 Feb 2016 20:45:56:366; >Start test method: testEBayPage
+08 Feb 2016 20:46:31:431; ----------------------------------------------------------------------------
+08 Feb 2016 20:46:44:849; Test started on localhost.localdomain machine
+08 Feb 2016 20:46:44:850; >Start test method: testEBayPage
+08 Feb 2016 20:46:47:832; >Success testing method: testEBayPage
+08 Feb 2016 20:51:57:524; ----------------------------------------------------------------------------
+08 Feb 2016 20:52:02:384; Test started on localhost.localdomain machine
+08 Feb 2016 20:52:02:385; >Start test method: testEBayPage
+08 Feb 2016 20:52:23:004; ----------------------------------------------------------------------------
+08 Feb 2016 20:52:35:911; Test started on localhost.localdomain machine
+08 Feb 2016 20:52:35:911; >Start test method: testEBayPage
+08 Feb 2016 20:52:42:585; >Success testing method: testEBayPage
+08 Feb 2016 20:54:19:738; ----------------------------------------------------------------------------
+08 Feb 2016 20:54:24:184; Test started on localhost.localdomain machine
+08 Feb 2016 20:54:24:184; >Start test method: testEBayPage
+08 Feb 2016 20:55:39:260; ----------------------------------------------------------------------------
+08 Feb 2016 20:55:53:177; Test started on localhost.localdomain machine
+08 Feb 2016 20:55:53:178; >Start test method: testEBayPage
+08 Feb 2016 20:55:57:255; >Success testing method: testEBayPage
+08 Feb 2016 20:58:13:422; ----------------------------------------------------------------------------
+08 Feb 2016 20:58:25:621; Test started on localhost.localdomain machine
+08 Feb 2016 20:58:25:622; >Start test method: testEBayPage
+08 Feb 2016 20:58:38:127; Execute: sendKeys(searchBox)
+08 Feb 2016 20:58:40:021; >Success testing method: testEBayPage
+08 Feb 2016 20:59:39:582; ----------------------------------------------------------------------------
+08 Feb 2016 20:59:44:207; Test started on localhost.localdomain machine
+08 Feb 2016 20:59:44:207; >Start test method: testEBayPage
+08 Feb 2016 21:00:04:343; ----------------------------------------------------------------------------
+08 Feb 2016 21:00:17:632; Test started on localhost.localdomain machine
+08 Feb 2016 21:00:17:632; >Start test method: testEBayPage
+08 Feb 2016 21:00:23:383; Execute: sendKeys(searchBox)
+08 Feb 2016 21:00:25:686; >Success testing method: testEBayPage
+08 Feb 2016 21:03:06:764; ----------------------------------------------------------------------------
+08 Feb 2016 21:03:19:651; Test started on localhost.localdomain machine
+08 Feb 2016 21:03:19:652; >Start test method: testEBayPage
+08 Feb 2016 21:03:26:130; Execute: sendKeys(searchBox)
+08 Feb 2016 21:03:27:897; >TestFail: testEBayPage
+08 Feb 2016 21:04:54:054; ----------------------------------------------------------------------------
+08 Feb 2016 21:04:56:454; Test started on localhost.localdomain machine
+08 Feb 2016 21:04:56:465; >Start test method: testEBayPage
+08 Feb 2016 21:05:22:293; ----------------------------------------------------------------------------
+08 Feb 2016 21:05:24:785; Test started on localhost.localdomain machine
+08 Feb 2016 21:05:24:787; >Start test method: testEBayPage
+08 Feb 2016 21:05:56:708; ----------------------------------------------------------------------------
+08 Feb 2016 21:06:01:561; Test started on localhost.localdomain machine
+08 Feb 2016 21:06:01:562; >Start test method: testEBayPage
+08 Feb 2016 21:07:44:476; ----------------------------------------------------------------------------
+08 Feb 2016 21:07:48:913; Test started on localhost.localdomain machine
+08 Feb 2016 21:07:48:914; >Start test method: testEBayPage
+08 Feb 2016 21:09:30:378; ----------------------------------------------------------------------------
+08 Feb 2016 21:10:06:562; Test started on localhost.localdomain machine
+08 Feb 2016 21:10:06:566; >Start test method: testEBayPage
+08 Feb 2016 21:10:11:276; Execute: sendKeys(searchBox)
+08 Feb 2016 21:10:13:080; Execute: submit(searchBox)
+08 Feb 2016 21:10:16:305; >Success testing method: testEBayPage
+08 Feb 2016 21:11:00:438; ----------------------------------------------------------------------------
+08 Feb 2016 21:11:04:978; Test started on localhost.localdomain machine
+08 Feb 2016 21:11:04:978; >Start test method: testEBayPage
+08 Feb 2016 21:11:39:889; ----------------------------------------------------------------------------
+08 Feb 2016 21:11:44:196; Test started on localhost.localdomain machine
+08 Feb 2016 21:11:44:197; >Start test method: testEBayPage
+08 Feb 2016 21:13:12:139; ----------------------------------------------------------------------------
+08 Feb 2016 21:13:24:213; Test started on localhost.localdomain machine
+08 Feb 2016 21:13:24:214; >Start test method: testEBayPage
+08 Feb 2016 21:13:29:289; Execute: sendKeys(searchBox)
+08 Feb 2016 21:13:30:664; Execute: submit(searchBox)
+08 Feb 2016 21:13:34:116; >Success testing method: testEBayPage
+08 Feb 2016 21:15:28:785; ----------------------------------------------------------------------------
+08 Feb 2016 21:15:39:699; Test started on localhost.localdomain machine
+08 Feb 2016 21:15:39:700; >Start test method: testEBayPage
+08 Feb 2016 21:15:44:856; Execute: sendKeys(searchBox)
+08 Feb 2016 21:15:46:498; Execute: submit(searchBox)
+08 Feb 2016 21:15:49:760; >Success testing method: testEBayPage
+08 Feb 2016 21:17:59:206; ----------------------------------------------------------------------------
+08 Feb 2016 21:18:10:525; Test started on localhost.localdomain machine
+08 Feb 2016 21:18:10:526; >Start test method: testEBayPage
+08 Feb 2016 21:18:40:631; >TestFail: testEBayPage
+08 Feb 2016 21:19:54:287; ----------------------------------------------------------------------------
+08 Feb 2016 21:19:56:094; Test started on localhost.localdomain machine
+08 Feb 2016 21:19:56:095; >Start test method: testEBayPage
+08 Feb 2016 21:21:02:145; ----------------------------------------------------------------------------
+08 Feb 2016 21:21:37:936; Test started on localhost.localdomain machine
+08 Feb 2016 21:21:37:936; >Start test method: testEBayPage
+08 Feb 2016 21:22:08:041; >TestFail: testEBayPage
+08 Feb 2016 21:29:53:038; ----------------------------------------------------------------------------
+08 Feb 2016 21:30:06:405; Test started on localhost.localdomain machine
+08 Feb 2016 21:30:06:406; >Start test method: testEBayPage
+08 Feb 2016 21:30:36:546; >TestFail: testEBayPage
+08 Feb 2016 21:32:28:706; ----------------------------------------------------------------------------
+08 Feb 2016 21:33:04:194; Test started on localhost.localdomain machine
+08 Feb 2016 21:33:04:195; >Start test method: testEBayPage
+08 Feb 2016 21:33:09:206; Execute: sendKeys(searchBox)
+08 Feb 2016 21:33:10:500; Execute: submit(searchBox)
+08 Feb 2016 21:33:13:634; >Success testing method: testEBayPage
+08 Feb 2016 21:38:09:673; ----------------------------------------------------------------------------
+08 Feb 2016 21:38:20:489; Test started on localhost.localdomain machine
+08 Feb 2016 21:38:20:490; >Start test method: testEBayPage
+08 Feb 2016 21:39:48:402; ----------------------------------------------------------------------------
+08 Feb 2016 21:39:49:977; Test started on localhost.localdomain machine
+08 Feb 2016 21:39:49:978; >Start test method: testEBayPage
+08 Feb 2016 21:43:01:999; ----------------------------------------------------------------------------
+08 Feb 2016 21:43:27:962; Test started on localhost.localdomain machine
+08 Feb 2016 21:43:27:962; >Start test method: testEBayPage
+08 Feb 2016 21:43:57:739; ----------------------------------------------------------------------------
+08 Feb 2016 21:44:10:147; Test started on localhost.localdomain machine
+08 Feb 2016 21:44:10:148; >Start test method: testEBayPage
+08 Feb 2016 21:44:14:921; Execute: sendKeys(searchBox)
+08 Feb 2016 21:44:16:394; Execute: submit(searchBox)
+08 Feb 2016 21:44:19:113; >Success testing method: testEBayPage
+08 Feb 2016 21:48:44:955; ----------------------------------------------------------------------------
+08 Feb 2016 21:48:58:084; Test started on localhost.localdomain machine
+08 Feb 2016 21:48:58:084; >Start test method: testEBayPage
+08 Feb 2016 21:50:36:911; ----------------------------------------------------------------------------
+08 Feb 2016 21:50:38:247; Test started on localhost.localdomain machine
+08 Feb 2016 21:50:38:251; >Start test method: testEBayPage
+08 Feb 2016 21:50:58:554; ----------------------------------------------------------------------------
+08 Feb 2016 21:51:35:286; Test started on localhost.localdomain machine
+08 Feb 2016 21:51:35:288; >Start test method: testEBayPage
+08 Feb 2016 21:53:51:350; ----------------------------------------------------------------------------
+08 Feb 2016 21:54:26:204; Test started on localhost.localdomain machine
+08 Feb 2016 21:54:26:204; >Start test method: testEBayPage
+08 Feb 2016 21:56:28:225; ----------------------------------------------------------------------------
+08 Feb 2016 21:57:01:943; Test started on localhost.localdomain machine
+08 Feb 2016 21:57:01:943; >Start test method: testEBayPage
+08 Feb 2016 21:57:07:040; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 21:57:07:231; Execute: sendKeys(searchBox)
+08 Feb 2016 21:57:08:535; Execute: submit(searchBox)
+08 Feb 2016 21:57:12:419; >Success testing method: testEBayPage
+08 Feb 2016 22:05:04:475; ----------------------------------------------------------------------------
+08 Feb 2016 22:05:09:017; Test started on localhost.localdomain machine
+08 Feb 2016 22:05:09:018; >Start test method: testEBayPage
+08 Feb 2016 22:05:57:965; ----------------------------------------------------------------------------
+08 Feb 2016 22:06:09:533; Test started on localhost.localdomain machine
+08 Feb 2016 22:06:09:534; >Start test method: testEBayPage
+08 Feb 2016 22:07:33:203; ----------------------------------------------------------------------------
+08 Feb 2016 22:08:14:243; Test started on localhost.localdomain machine
+08 Feb 2016 22:08:14:243; >Start test method: testEBayPage
+08 Feb 2016 22:08:48:817; >TestFail: testEBayPage
+08 Feb 2016 22:10:41:993; ----------------------------------------------------------------------------
+08 Feb 2016 22:11:21:223; Test started on localhost.localdomain machine
+08 Feb 2016 22:11:21:223; >Start test method: testEBayPage
+08 Feb 2016 22:12:29:584; ----------------------------------------------------------------------------
+08 Feb 2016 22:13:00:864; Test started on localhost.localdomain machine
+08 Feb 2016 22:13:00:864; >Start test method: testEBayPage
+08 Feb 2016 22:14:26:528; ----------------------------------------------------------------------------
+08 Feb 2016 22:15:06:197; Test started on localhost.localdomain machine
+08 Feb 2016 22:15:06:200; >Start test method: testEBayPage
+08 Feb 2016 22:15:11:312; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 22:15:11:420; Execute: sendKeys(searchBox)
+08 Feb 2016 22:15:12:652; Execute: submit(searchBox)
+08 Feb 2016 22:15:15:594; >Success testing method: testEBayPage
+08 Feb 2016 22:22:39:548; ----------------------------------------------------------------------------
+08 Feb 2016 22:22:44:092; Test started on localhost.localdomain machine
+08 Feb 2016 22:22:44:093; >Start test method: testEBayPage
+08 Feb 2016 22:31:58:182; ----------------------------------------------------------------------------
+08 Feb 2016 22:32:02:943; Test started on localhost.localdomain machine
+08 Feb 2016 22:32:02:943; >Start test method: testEBayPage
+08 Feb 2016 22:36:30:697; ----------------------------------------------------------------------------
+08 Feb 2016 22:37:00:513; Test started on localhost.localdomain machine
+08 Feb 2016 22:37:00:514; >Start test method: testEBayPage
+08 Feb 2016 22:38:16:499; ----------------------------------------------------------------------------
+08 Feb 2016 22:38:30:174; Test started on localhost.localdomain machine
+08 Feb 2016 22:38:30:174; >Start test method: testEBayPage
+08 Feb 2016 22:38:41:090; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 22:38:41:157; Execute: sendKeys(searchBox)
+08 Feb 2016 22:38:42:386; Execute: submit(searchBox)
+08 Feb 2016 22:38:45:883; Execute: click(homeButton)
+08 Feb 2016 22:38:48:186; Fail to execute click(homeButton)
+08 Feb 2016 22:38:48:188; >Success testing method: testEBayPage
+08 Feb 2016 22:43:13:766; ----------------------------------------------------------------------------
+08 Feb 2016 22:43:28:049; Test started on localhost.localdomain machine
+08 Feb 2016 22:43:28:049; >Start test method: testEBayPage
+08 Feb 2016 22:43:33:269; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 22:43:33:427; Execute: sendKeys(searchBox)
+08 Feb 2016 22:43:34:724; Execute: submit(searchBox)
+08 Feb 2016 22:43:39:733; Execute: click(homeButton)
+08 Feb 2016 22:43:43:251; >Success testing method: testEBayPage

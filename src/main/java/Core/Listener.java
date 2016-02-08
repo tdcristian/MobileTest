@@ -3,8 +3,9 @@ package Core;
 import io.appium.java_client.AppiumDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.TestListenerAdapter;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,18 +16,18 @@ import java.util.Date;
 /**
  * Created by tescu on 2/1/16.
  */
-public class Listener extends TestListenerAdapter {
+public class Listener extends Base implements ITestListener {
 
     public void onTestStart(ITestResult iTestResult) {
-        System.out.println("Start test method: "+iTestResult.getMethod().getMethodName());
+        logger.info("Start test method: "+iTestResult.getMethod().getMethodName());
     }
 
     public void onTestSuccess(ITestResult iTestResult) {
-        System.out.println("Success testing method: "+iTestResult.getMethod().getMethodName());
+        logger.info("Success testing method: "+iTestResult.getMethod().getMethodName());
     }
 
     public void onTestFailure(ITestResult iTestResult) {
-        System.out.println("TestFail: "+iTestResult.getMethod().getMethodName());
+        logger.info("TestFail: "+iTestResult.getMethod().getMethodName());
         AppiumDriver driver = Base.getDriver();
         File location = new File("Screenshots");
         DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
@@ -42,6 +43,22 @@ public class Listener extends TestListenerAdapter {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void onTestSkipped(ITestResult iTestResult) {
+
+    }
+
+    public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
+
+    }
+
+    public void onStart(ITestContext iTestContext) {
+
+    }
+
+    public void onFinish(ITestContext iTestContext) {
+
     }
 
 }

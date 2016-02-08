@@ -82,7 +82,7 @@ public abstract class Base {
     public void tearDown(){
 
         logger.info("$$$$ Test ended! $$$$");
-
+        logger.info("----------------------------------------------------------------------------");
     }
 
 

@@ -2,18 +2,17 @@ package pages.Calculator;
 
 import Core.Element;
 import Core.NativeElem;
-import org.openqa.selenium.By;
 
 /**
  * Created by tescu on 2/3/16.
  */
 public class Calculator {
 
-    public NativeElem five = new NativeElem(By.name("5"),"five");
-    public NativeElem plus = new NativeElem(By.name("+"),"plus");
-    public NativeElem four = new NativeElem(By.name("4"),"four");
-    public NativeElem equals = new NativeElem("equals","Equal");
-    public NativeElem value = new NativeElem(By.id("com.android.calculator2:id/formula"),"value");
+    public NativeElem five = new NativeElem(Element.LocatorType.byName,"5","five");
+    public NativeElem plus = new NativeElem(Element.LocatorType.byName,"+","plus");
+    public NativeElem four = new NativeElem(Element.LocatorType.byName,"4","four");
+    public NativeElem equals = new NativeElem(Element.LocatorType.byAccessibilityId,"equals","Equal");
+    public NativeElem value = new NativeElem(Element.LocatorType.byId,"com.android.calculator2:id/formula","value");
 
     public Calculator() {
     }

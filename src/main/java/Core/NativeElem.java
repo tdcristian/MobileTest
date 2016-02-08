@@ -14,20 +14,36 @@ public class NativeElem extends Element {
 
     private WebElement element;
     private String logName;
-    private List<WebElement> elements;
-    private By locator;
+    private String  locator;
 
-    public NativeElem(By locator, String logName) {
-        this.element = getDriver().findElement(locator);
-        this.logName = logName;
-        this.locator = locator;
+    public NativeElem(LocatorType locatorType,String locator, String logName) {
+
+        switch (locatorType) {
+
+            case byId:
+                this.element = getDriver().findElement(By.id(locator));
+                this.logName = logName;
+                this.locator = locator;
+                break;
+            case byCss:
+                this.element = getDriver().findElement(By.cssSelector(locator));
+                this.logName = logName;
+                this.locator = locator;
+                break;
+            case byName:
+                this.element = getDriver().findElement(By.name(locator));
+                this.logName = logName;
+                this.locator = locator;
+                break;
+            case byAccessibilityId:
+                this.element = getDriver().findElementByAccessibilityId(locator);
+                this.logName = logName;
+                this.locator = locator;
+                break;
+        }
+
     }
 
-
-    public NativeElem(String accessibilityId,String logName) {
-        this.element = getDriver().findElementByAccessibilityId(accessibilityId);
-        this.logName = logName;
-    }
 
     @Override
     public void click() {
@@ -59,7 +75,7 @@ public class NativeElem extends Element {
     public void waitToBeVisible(int timeout) {
         try {
             logger.info("Execute: waitToBeVisible("+logName+")");
-            new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.presenceOfElementLocated(locator));
+            new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.visibilityOf(element));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeVisible("+logName+")");
         }
@@ -73,7 +89,7 @@ public class NativeElem extends Element {
     public void waitToBeInvisible(int timeout) {
         try {
             logger.info("Execute: waitToBeInvisible("+logName+")");
-            new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.invisibilityOfElementLocated(locator));
+            new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(element)));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeInvisible("+logName+")");
         }

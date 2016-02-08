@@ -10,6 +10,10 @@ import java.util.List;
  */
 public abstract class Element extends Base {
 
+    public  enum LocatorType {
+        byId, byName, byCss, byAccessibilityId;
+    }
+
     public abstract void click();
 
     public abstract String getText();

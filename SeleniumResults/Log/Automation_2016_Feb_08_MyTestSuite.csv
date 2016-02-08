@@ -316,3 +316,48 @@
 08 Feb 2016 22:43:34:724; Execute: submit(searchBox)
 08 Feb 2016 22:43:39:733; Execute: click(homeButton)
 08 Feb 2016 22:43:43:251; >Success testing method: testEBayPage
+08 Feb 2016 23:12:11:022; ----------------------------------------------------------------------------
+08 Feb 2016 23:12:26:088; Test started on localhost.localdomain machine
+08 Feb 2016 23:12:26:089; >Start test method: testEBayPage
+08 Feb 2016 23:12:40:309; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 23:12:40:526; Execute: sendKeys(searchBox)
+08 Feb 2016 23:12:42:613; Execute: submit(searchBox)
+08 Feb 2016 23:12:49:375; >TestFail: testEBayPage
+08 Feb 2016 23:18:41:203; ----------------------------------------------------------------------------
+08 Feb 2016 23:19:27:593; Test started on localhost.localdomain machine
+08 Feb 2016 23:19:27:596; >Start test method: testEBayPage
+08 Feb 2016 23:19:34:689; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 23:19:34:904; Execute: sendKeys(searchBox)
+08 Feb 2016 23:19:36:747; Execute: submit(searchBox)
+08 Feb 2016 23:19:43:946; Execute: waitToBeVisible(numberOfResults)
+08 Feb 2016 23:19:43:949; Fail to execute: waitToBeVisible(numberOfResults)
+08 Feb 2016 23:19:43:962; Execute: click(homeButton)
+08 Feb 2016 23:19:47:403; >Success testing method: testEBayPage
+08 Feb 2016 23:26:11:439; ----------------------------------------------------------------------------
+08 Feb 2016 23:26:27:649; Test started on localhost.localdomain machine
+08 Feb 2016 23:26:27:649; >Start test method: testEBayPage
+08 Feb 2016 23:26:34:420; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 23:26:34:787; Execute: sendKeys(searchBox)
+08 Feb 2016 23:26:37:029; Execute: submit(searchBox)
+08 Feb 2016 23:26:44:296; Execute: waitListToBeVisible(numberOfResults)
+08 Feb 2016 23:26:44:435; Execute: click(homeButton)
+08 Feb 2016 23:26:48:104; >Success testing method: testEBayPage
+08 Feb 2016 23:28:42:264; ----------------------------------------------------------------------------
+08 Feb 2016 23:28:58:221; Test started on localhost.localdomain machine
+08 Feb 2016 23:28:58:222; >Start test method: testEBayPage
+08 Feb 2016 23:29:05:733; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 23:29:06:077; Execute: sendKeys(searchBox)
+08 Feb 2016 23:29:08:072; Execute: submit(searchBox)
+08 Feb 2016 23:29:15:312; Execute: waitListToBeVisible(numberOfResults)
+08 Feb 2016 23:29:15:535; Execute: click(homeButton)
+08 Feb 2016 23:29:19:043; >Success testing method: testEBayPage
+08 Feb 2016 23:32:18:693; ----------------------------------------------------------------------------
+08 Feb 2016 23:32:35:847; Test started on localhost.localdomain machine
+08 Feb 2016 23:32:35:847; >Start test method: testEBayPage
+08 Feb 2016 23:32:43:008; Execute: waitToBeVisible(searchBox)
+08 Feb 2016 23:32:43:162; Execute: sendKeys(searchBox)
+08 Feb 2016 23:32:44:806; Execute: submit(searchBox)
+08 Feb 2016 23:32:52:584; Execute: waitListToBeVisible(numberOfResults)
+08 Feb 2016 23:32:52:746; Execute: size(numberOfResults)
+08 Feb 2016 23:32:52:750; Execute: click(homeButton)
+08 Feb 2016 23:32:56:100; >Success testing method: testEBayPage

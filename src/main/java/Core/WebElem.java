@@ -55,33 +55,26 @@ public class WebElem extends Element {
                 this.element = getDriver().findElement(By.xpath(locator));
                 this.logName = logName;
                 this.locator = locator;
+                break;
+            case byCSSList:
+                this.elemList = getDriver().findElements(By.cssSelector(locator));
+                this.logName = logName;
+                this.locator = locator;
         }
     }
 
-    public WebElement element(By locator) {
-
-        logger.info("Execute: findElement("+logName+")");
-        WebElement element = null;
+    public int size(){
+        int number = 0;
         try {
-            element = getDriver().findElement(locator);
-        }
-        catch (Exception ex){
-            logger.info("Fail to execute: findElement("+logName+")");
-        }
-        return element;
-    }
-
-    public List<WebElement> elements(By locator) {
-
-        logger.info("Execute: findElements("+logName+")");
-        List<WebElement> elements = null;
-        try {
-            elements = getDriver().findElements(locator);
+            logger.info("Execute: size("+logName+")");
+            number = elemList.size();
         }catch (Exception ex){
-            logger.info("Fail to execute: findElements("+logName+")");
+            logger.info("Fail to execute: size("+logName+")");
         }
-        return elements;
+        return number;
     }
+
+
 
     @Override
     public void click() {
@@ -152,6 +145,15 @@ public class WebElem extends Element {
             element.submit();
         }catch (Exception ex){
             logger.info("Fail to execute: submit("+logName+")");
+        }
+    }
+
+    public void waitListToBeVisible(int timeout) {
+        try {
+            logger.info("Execute: waitListToBeVisible("+logName+")");
+            new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(locator)));
+        }catch (Exception ex){
+            logger.info("Fail to execute: waitListToBeVisible("+logName+")");
         }
     }
 }

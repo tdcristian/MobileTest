@@ -47,7 +47,6 @@ public class HybridTest extends Base{
     @AfterClass
     public void tearDown(){
         super.tearDown();
-
         getDriver().closeApp();
         getDriver().quit();
     }

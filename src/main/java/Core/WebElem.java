@@ -70,6 +70,7 @@ public class WebElem extends Element {
             number = elemList.size();
         }catch (Exception ex){
             logger.info("Fail to execute: size("+logName+")");
+            System.exit(1);
         }
         return number;
     }
@@ -82,7 +83,8 @@ public class WebElem extends Element {
             logger.info("Execute: click("+logName+")");
             element.click();
         }catch (Exception ex){
-            logger.info("Fail to execute click("+logName+")");
+            logger.info("Fail to execute click( "+logName+")");
+            System.exit(1);
         }
     }
 
@@ -93,7 +95,8 @@ public class WebElem extends Element {
             logger.info("Execute: getText("+logName+")");
             elem = element.getText();
         }catch (Exception ex){
-            logger.info("Fail to execute: getText("+logName+")");
+            logger.info("Fail to execute: getText( "+logName+")");
+            System.exit(1);
         }
         return elem;
     }
@@ -104,17 +107,19 @@ public class WebElem extends Element {
             logger.info("Execute: sendKeys("+logName+")");
             element.sendKeys(text);
         }catch (Exception ex){
-            logger.info("Fail to execute: sendKeys("+logName+")");
+            logger.info("Fail to execute: sendKeys( "+logName+")");
+            System.exit(1);
         }
     }
 
     @Override
     public void sendKeys(Keys key) {
         try {
-            logger.info("Execute: sendKeys("+logName+")");
+            logger.info("Execute: sendKeys( "+logName+")");
             element.sendKeys(key);
         }catch (Exception ex){
-            logger.info("Fail to execute: sendKeys("+logName+")");
+            logger.info("Fail to execute: sendKeys( "+logName+")");
+            System.exit(1);
         }
     }
 
@@ -125,7 +130,8 @@ public class WebElem extends Element {
             logger.info("Execute: waitToBeVisible("+logName+")");
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.visibilityOf(element));
         }catch (Exception ex){
-            logger.info("Fail to execute: waitToBeVisible("+logName+")");
+            logger.info("Fail to execute: waitToBeVisible( "+logName+")");
+            System.exit(1);
         }
     }
 
@@ -135,8 +141,21 @@ public class WebElem extends Element {
             logger.info("Execute: waitToBeInvisible("+logName+")");
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(element)));
         }catch (Exception ex){
-            logger.info("Fail to execute: waitToBeInvisible("+logName+")");
+            logger.info("Fail to execute: waitToBeInvisible( "+logName+")");
+            System.exit(1);
         }
+    }
+
+    @Override
+    public void clear() {
+        try {
+            logger.info("Execute: clear( "+logName+")");
+            element.clear();
+        }catch (Exception ex){
+            logger.info("Fail to execute: clear("+logName+")");
+            System.exit(1);
+        }
+
     }
 
     public void submit() {
@@ -145,6 +164,7 @@ public class WebElem extends Element {
             element.submit();
         }catch (Exception ex){
             logger.info("Fail to execute: submit("+logName+")");
+            System.exit(1);
         }
     }
 
@@ -154,6 +174,7 @@ public class WebElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(locator)));
         }catch (Exception ex){
             logger.info("Fail to execute: waitListToBeVisible("+logName+")");
+            System.exit(1);
         }
     }
 }

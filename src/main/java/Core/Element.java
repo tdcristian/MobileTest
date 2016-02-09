@@ -27,5 +27,8 @@ public abstract class Element extends Base {
 
     public abstract void waitToBeInvisible(int timeout);
 
+    public abstract void clear();
+
+
 
 }

@@ -1,4 +1,4 @@
-package pages.Calculator;
+package pages;
 
 import Core.Base;
 import Core.Element;

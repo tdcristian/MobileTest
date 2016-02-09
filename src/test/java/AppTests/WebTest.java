@@ -10,8 +10,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.Calculator.EBayHomePage;
-import pages.Calculator.SearchResultEBayPage;
+import pages.EBayHomePage;
+import pages.SearchResultEBayPage;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -25,7 +25,7 @@ public class WebTest extends Base {
     AndroidDriver driver;
 
     @BeforeClass
-    public  void setUp() throws IOException {
+    public  void setUp() throws IOException, InterruptedException {
         super.setUp();
 
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -37,17 +37,13 @@ public class WebTest extends Base {
         caps.setCapability(MobileCapabilityType.BROWSER_NAME, "Browser");
         setDriver(caps);
         driver = getDriver();
-        try {
-            Thread.sleep(7000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         Base.implicitWait(30);
 
     }
 
     @AfterClass
     public  void tearDown(){
+        super.tearDown();
         driver.quit();
     }
 

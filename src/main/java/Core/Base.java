@@ -17,6 +17,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Enumeration;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -27,8 +28,9 @@ public abstract class Base {
     protected static AndroidDriver driver;
     public static org.apache.log4j.Logger logger;
 
-    public static AndroidDriver setDriver(DesiredCapabilities caps) throws MalformedURLException {
+    public static AndroidDriver setDriver(DesiredCapabilities caps) throws MalformedURLException, InterruptedException {
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps);
+        Thread.sleep(7000);
         return driver;
     }
 
@@ -53,7 +55,7 @@ public abstract class Base {
     }
 
     @BeforeClass
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, InterruptedException {
 
         System.setProperty("log4j.defaultInitOverride","true");
         logger = Logger.getLogger("MobileTesting");
@@ -86,4 +88,51 @@ public abstract class Base {
     }
 
 
+    public static void hideKeyboard() {
+
+        try {
+            logger.info("Execute: hideKeyboard()");
+            Thread.sleep(1000);
+            getDriver().hideKeyboard();
+        }catch (Exception ex){
+            logger.info("Fail to execute: hideKeyboard()");
+            System.exit(1);
+        }
+
+    }
+
+
+    public static void switchContentToWeb() {
+
+        String contentName = null;
+        try {
+            Set<String> contents = getDriver().getContextHandles();
+            for (String context :contents) {
+                logger.info("context = " + context);
+            }
+            getDriver().context((String) contents.toArray()[1]);
+            contentName = (String) contents.toArray()[1];
+            logger.info("Execute: switchContentToWeb("+contents.toArray()[1]+")");
+        }catch (Exception ex){
+            logger.info("Fail to execute: switchContentToWeb("+contentName+")");
+            System.exit(1);
+        }
+    }
+
+    public static void switchContentToNative() {
+
+        String contentName = null;
+        try {
+            Set<String> contents = getDriver().getContextHandles();
+            for (String context :contents) {
+                logger.info("context = " + context);
+            }
+            getDriver().context((String) contents.toArray()[0]);
+            contentName = (String) contents.toArray()[1];
+            logger.info("Execute: switchContentToNative("+contents.toArray()[0]+")");
+        }catch (Exception ex){
+            logger.info("Fail to execute: switchContentToNative("+contentName+")");
+            System.exit(1);
+        }
+    }
 }

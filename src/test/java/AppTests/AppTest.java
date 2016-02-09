@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.Calculator.Calculator;
+import pages.Calculator;
 
 import java.io.IOException;
 
@@ -22,7 +22,7 @@ import java.io.IOException;
 public class AppTest extends Base {
 
     @BeforeClass
-    public void setUp() throws IOException {
+    public void setUp() throws IOException, InterruptedException {
         super.setUp();
 
         DesiredCapabilities caps = new DesiredCapabilities();
@@ -42,6 +42,7 @@ public class AppTest extends Base {
     public void tearDown(){
         super.tearDown();
         getDriver().closeApp();
+        getDriver().quit();
     }
 
     @Test

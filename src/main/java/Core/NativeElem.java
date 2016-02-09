@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by tescu on 2/2/16.
@@ -52,6 +53,7 @@ public class NativeElem extends Element {
             element.click();
         }catch (Exception ex){
             logger.info("Fail to execute click("+logName+")");
+            System.exit(1);
         }
     }
 
@@ -63,6 +65,7 @@ public class NativeElem extends Element {
             elem = element.getText();
         }catch (Exception ex){
             logger.info("Fail to execute: getText("+logName+")");
+            System.exit(1);
         }
         return elem;
     }
@@ -74,6 +77,7 @@ public class NativeElem extends Element {
             element.sendKeys(text);
         }catch (Exception ex){
             logger.info("Fail to execute: sendKeys("+logName+")");
+            System.exit(1);
         }
     }
 
@@ -84,6 +88,7 @@ public class NativeElem extends Element {
             element.sendKeys(key);
         }catch (Exception ex){
             logger.info("Fail to execute: sendKeys("+logName+")");
+            System.exit(1);
         }
     }
 
@@ -98,6 +103,7 @@ public class NativeElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.visibilityOf(element));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeVisible("+logName+")");
+            System.exit(1);
         }
     }
 
@@ -112,7 +118,19 @@ public class NativeElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(element)));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeInvisible("+logName+")");
+            System.exit(1);
         }
     }
 
+    @Override
+    public void clear() {
+        try {
+            logger.info("Execute: clear("+logName+")");
+            element.clear();
+        }catch (Exception ex){
+            logger.info("Fail to execute: clear("+logName+")");
+            System.exit(1);
+        }
+
+    }
 }

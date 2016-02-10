@@ -116,7 +116,7 @@ public abstract class Base {
             for (String context :contents) {
                 logger.info("context = " + context);
             }
-            Thread.sleep(2000);
+            Thread.sleep(4000);
             getDriver().context((String) contents.toArray()[1]);
             contentName = (String) contents.toArray()[1];
             logger.info("Execute: switchContentToWeb("+contents.toArray()[1]+")");
@@ -134,7 +134,6 @@ public abstract class Base {
             for (String context :contents) {
                 logger.info("context = " + context);
             }
-            Thread.sleep(1000);
             getDriver().context((String) contents.toArray()[0]);
             contentName = (String) contents.toArray()[1];
             logger.info("Execute: switchContentToNative("+contents.toArray()[0]+")");

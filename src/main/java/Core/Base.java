@@ -1,12 +1,17 @@
 package Core;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
@@ -15,6 +20,7 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.Properties;
 import java.util.Set;
@@ -96,7 +102,7 @@ public abstract class Base {
             getDriver().hideKeyboard();
         }catch (Exception ex){
             logger.info("Fail to execute: hideKeyboard()");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
 
     }
@@ -110,12 +116,13 @@ public abstract class Base {
             for (String context :contents) {
                 logger.info("context = " + context);
             }
+            Thread.sleep(1000);
             getDriver().context((String) contents.toArray()[1]);
             contentName = (String) contents.toArray()[1];
             logger.info("Execute: switchContentToWeb("+contents.toArray()[1]+")");
         }catch (Exception ex){
             logger.info("Fail to execute: switchContentToWeb("+contentName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -127,12 +134,13 @@ public abstract class Base {
             for (String context :contents) {
                 logger.info("context = " + context);
             }
+            Thread.sleep(1000);
             getDriver().context((String) contents.toArray()[0]);
             contentName = (String) contents.toArray()[1];
             logger.info("Execute: switchContentToNative("+contents.toArray()[0]+")");
         }catch (Exception ex){
             logger.info("Fail to execute: switchContentToNative("+contentName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 }

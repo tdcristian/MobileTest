@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
 import java.util.Set;
@@ -22,22 +23,42 @@ public class NativeElem extends Element {
         switch (locatorType) {
 
             case byId:
-                this.element = getDriver().findElement(By.id(locator));
+                try {
+                    logger.info("Execute: findElement(By.id("+locator+")");
+                    this.element = getDriver().findElement(By.id(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.id("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byCss:
-                this.element = getDriver().findElement(By.cssSelector(locator));
+                try {
+                    logger.info("Execute: findElement(By.cssSelector("+locator+")");
+                    this.element = getDriver().findElement(By.cssSelector(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.cssSelector("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byName:
-                this.element = getDriver().findElement(By.name(locator));
+                try {
+                    logger.info("Execute: findElement(By.name("+locator+")");
+                    this.element = getDriver().findElement(By.name(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.name("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byAccessibilityId:
-                this.element = getDriver().findElementByAccessibilityId(locator);
+                try {
+                    logger.info("Execute: findElementByAccessibilityId("+locator+")");
+                    this.element = getDriver().findElementByAccessibilityId(locator);
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElementByAccessibilityId("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
@@ -53,7 +74,7 @@ public class NativeElem extends Element {
             element.click();
         }catch (Exception ex){
             logger.info("Fail to execute click("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -65,7 +86,7 @@ public class NativeElem extends Element {
             elem = element.getText();
         }catch (Exception ex){
             logger.info("Fail to execute: getText("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
         return elem;
     }
@@ -73,22 +94,22 @@ public class NativeElem extends Element {
     @Override
     public void sendKeys(String text) {
         try {
-            logger.info("Execute: sendKeys("+logName+")");
+            logger.info("Execute: sendKeys( "+logName+")");
             element.sendKeys(text);
         }catch (Exception ex){
             logger.info("Fail to execute: sendKeys("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
     @Override
     public void sendKeys(Keys key) {
         try {
-            logger.info("Execute: sendKeys("+logName+")");
+            logger.info("Execute: sendKeys( "+logName+" )");
             element.sendKeys(key);
         }catch (Exception ex){
             logger.info("Fail to execute: sendKeys("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -103,7 +124,7 @@ public class NativeElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.visibilityOf(element));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeVisible("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -118,7 +139,7 @@ public class NativeElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(element)));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeInvisible("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -129,7 +150,7 @@ public class NativeElem extends Element {
             element.clear();
         }catch (Exception ex){
             logger.info("Fail to execute: clear("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
 
     }

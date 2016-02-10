@@ -52,8 +52,7 @@ public class HybridTest extends Base{
     }
 
     @Test
-    public void testHybridApp()
-    {
+    public void testHybridApp() {
         TestAppHomePage testAppHomePage = new TestAppHomePage();
         testAppHomePage.navigateToURL("http://www.google.com");
         Base.implicitWait(30);

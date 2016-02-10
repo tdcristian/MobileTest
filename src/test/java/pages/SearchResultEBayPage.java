@@ -7,7 +7,7 @@ import Core.WebElem;
 /**
  * Created by tescu on 2/8/16.
  */
-public class SearchResultEBayPage extends Base {
+public class SearchResultEBayPage extends Base  {
 
     WebElem homeButton = new WebElem(Element.LocatorType.byCss,"a.homeicon","homeButton");
     WebElem list = new WebElem(Element.LocatorType.byCSSList,"div.stpFxht a","numberOfResults");

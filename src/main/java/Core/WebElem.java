@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -22,42 +23,82 @@ public class WebElem extends Element {
 
         switch (locatorType){
             case byId:
-                this.element = getDriver().findElement(By.id(locator));
+                try {
+                    logger.info("Execute: findElement(By.id("+locator+")");
+                    this.element = getDriver().findElement(By.id(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.id("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byName:
-                this.element = getDriver().findElement(By.name(locator));
+                try {
+                    logger.info("Execute: findElement(By.name("+locator+")");
+                    this.element = getDriver().findElement(By.name(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.name("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byCss:
-                this.element = getDriver().findElement(By.cssSelector(locator));
+                try {
+                    logger.info("Execute: findElement(By.cssSelector("+locator+")");
+                    this.element = getDriver().findElement(By.cssSelector(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.cssSelector("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byLinkText:
-                this.element = getDriver().findElement(By.linkText(locator));
+                try {
+                    logger.info("Execute: findElement(By.linkText("+locator+")");
+                    this.element = getDriver().findElement(By.linkText(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.linkText("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byPartialLinkText:
-                this.element = getDriver().findElement(By.partialLinkText(locator));
+                try {
+                    logger.info("Execute: findElement(By.partialLinkText("+locator+")");
+                    this.element = getDriver().findElement(By.partialLinkText(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.partialLinkText("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byTagName:
-                this.element = getDriver().findElement(By.tagName(locator));
+                try {
+                    logger.info("Execute: findElement(By.tagName("+locator+")");
+                    this.element = getDriver().findElement(By.tagName(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.tagName("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byXPath:
-                this.element = getDriver().findElement(By.xpath(locator));
+                try {
+                    logger.info("Execute: findElement(By.xpath("+locator+")");
+                    this.element = getDriver().findElement(By.xpath(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.xpath("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
                 break;
             case byCSSList:
-                this.elemList = getDriver().findElements(By.cssSelector(locator));
+                try {
+                    logger.info("Execute: findElement(By.cssSelector("+locator+")");
+                    this.elemList = getDriver().findElements(By.cssSelector(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.cssSelector("+locator+")");
+                }
                 this.logName = logName;
                 this.locator = locator;
         }
@@ -70,7 +111,7 @@ public class WebElem extends Element {
             number = elemList.size();
         }catch (Exception ex){
             logger.info("Fail to execute: size("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
         return number;
     }
@@ -84,7 +125,7 @@ public class WebElem extends Element {
             element.click();
         }catch (Exception ex){
             logger.info("Fail to execute click( "+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -96,7 +137,7 @@ public class WebElem extends Element {
             elem = element.getText();
         }catch (Exception ex){
             logger.info("Fail to execute: getText( "+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
         return elem;
     }
@@ -108,7 +149,7 @@ public class WebElem extends Element {
             element.sendKeys(text);
         }catch (Exception ex){
             logger.info("Fail to execute: sendKeys( "+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -119,7 +160,7 @@ public class WebElem extends Element {
             element.sendKeys(key);
         }catch (Exception ex){
             logger.info("Fail to execute: sendKeys( "+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -131,7 +172,7 @@ public class WebElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.visibilityOf(element));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeVisible( "+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -142,7 +183,7 @@ public class WebElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(element)));
         }catch (Exception ex){
             logger.info("Fail to execute: waitToBeInvisible( "+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -153,7 +194,7 @@ public class WebElem extends Element {
             element.clear();
         }catch (Exception ex){
             logger.info("Fail to execute: clear("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
 
     }
@@ -164,7 +205,7 @@ public class WebElem extends Element {
             element.submit();
         }catch (Exception ex){
             logger.info("Fail to execute: submit("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 
@@ -174,7 +215,7 @@ public class WebElem extends Element {
             new WebDriverWait(getDriver(),timeout).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(locator)));
         }catch (Exception ex){
             logger.info("Fail to execute: waitListToBeVisible("+logName+")");
-            System.exit(1);
+            Assert.fail("Action failed!");
         }
     }
 }

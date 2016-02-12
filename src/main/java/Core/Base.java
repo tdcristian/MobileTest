@@ -40,14 +40,28 @@ public abstract class Base {
         return driver;
     }
 
+    /**
+     *
+     * @return driver
+     */
     public static AndroidDriver getDriver(){
         return driver;
     }
 
+    /**
+     *
+     * @return machine name
+     * @throws UnknownHostException
+     */
     protected static String getMachineName() throws UnknownHostException {
         return InetAddress.getLocalHost().getHostName();
     }
 
+    /**
+     *
+     * @param dateF date format
+     * @return date according to the chosen format
+     */
     public static String getCurrentDateInSpecifiedFormat(String dateF)
     {
         DateFormat dateFormat = new SimpleDateFormat(dateF);
@@ -56,6 +70,10 @@ public abstract class Base {
         return dateStr;
     }
 
+    /**
+     * Set implicit wait
+     * @param seconds number of seconds set for implicit wait
+     */
     protected static void implicitWait(int seconds){
         getDriver().manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
     }
@@ -108,7 +126,9 @@ public abstract class Base {
         }
     }
 
-
+    /**
+     * Switch to web content
+     */
     public static void switchContentToWeb() {
 
         String contentName = null;
@@ -127,6 +147,9 @@ public abstract class Base {
         }
     }
 
+    /**
+     * Switch to native content
+     */
     public static void switchContentToNative() {
 
         String contentName = null;
@@ -144,6 +167,10 @@ public abstract class Base {
         }
     }
 
+    /**
+     * Enter keyCode from mobile keyboard
+     * @param keyCode AndroidKeyCode code (Ex AndroidKeyCode.HOME)
+     */
     public static void pressKeyCode(int keyCode) {
 
         try {

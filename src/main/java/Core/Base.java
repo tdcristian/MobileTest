@@ -93,7 +93,9 @@ public abstract class Base {
         logger.info("----------------------------------------------------------------------------");
     }
 
-
+    /**
+     * Hide keyboard
+     */
     public static void hideKeyboard() {
 
         try {
@@ -104,7 +106,6 @@ public abstract class Base {
             logger.info("Fail to execute: hideKeyboard()");
             Assert.fail("Action failed!");
         }
-
     }
 
 
@@ -141,5 +142,17 @@ public abstract class Base {
             logger.info("Fail to execute: switchContentToNative("+contentName+")");
             Assert.fail("Action failed!");
         }
+    }
+
+    public static void pressKeyCode(int keyCode) {
+
+        try {
+            logger.info("Execute: pressKeyCode("+keyCode+")");
+            getDriver().pressKeyCode(keyCode);
+        }catch (Exception ex){
+            logger.info("Fail to execute: pressKeyCode("+keyCode+")");
+            Assert.fail("Action failed!");
+        }
+
     }
 }

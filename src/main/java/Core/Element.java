@@ -12,7 +12,7 @@ import java.util.List;
 public abstract class Element extends Base {
 
     public  enum LocatorType {
-        byId, byName, byCss, byAccessibilityId, byXPath, byLinkText, byPartialLinkText, byTagName, byCSSList;
+        byId, byName, byCss, byAccessibilityId, byXPath, byLinkText, byPartialLinkText, byTagName, byClassName, byCSSList;
     }
 
     public abstract void click();

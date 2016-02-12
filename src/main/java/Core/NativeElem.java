@@ -1,13 +1,11 @@
 package Core;
 
+import io.appium.java_client.TouchAction;
 import org.openqa.selenium.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.util.List;
-import java.util.Set;
 
 /**
  * Created by tescu on 2/2/16.
@@ -62,10 +60,31 @@ public class NativeElem extends Element {
                 this.logName = logName;
                 this.locator = locator;
                 break;
+            case byClassName:
+                try {
+                    logger.info("Execute: findElementByClassName("+locator+")");
+                    this.element = getDriver().findElementByClassName(locator);
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElementByClassName("+locator+")");
+                }
+                this.logName = logName;
+                this.locator = locator;
+                break;
         }
 
     }
 
+    public WebElement getElement() {
+        return element;
+    }
+
+    public String getLogName() {
+        return logName;
+    }
+
+    public String getLocator() {
+        return locator;
+    }
 
     @Override
     public void click() {
@@ -152,6 +171,102 @@ public class NativeElem extends Element {
             logger.info("Fail to execute: clear("+logName+")");
             Assert.fail("Action failed!");
         }
+
+    }
+
+    public void longPress() {
+
+        try {
+            logger.info("Execute: longPress("+logName+")");
+            TouchAction touchAction = new TouchAction(getDriver());
+            touchAction.longPress(element).perform();
+        }catch (Exception ex){
+            logger.info("Fail to execute: longPress("+logName+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    public static void scrollTo(String text){
+        try {
+            logger.info("Execute: scrollTo("+text+")");
+            getDriver().scrollTo(text);
+        }catch (Exception ex){
+            logger.info("Fail to execute: longPress("+text+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+
+    public static void pressOnAndMoveTo(NativeElem sourceElement, NativeElem targetElement) {
+
+        try {
+            WebElement source = sourceElement.getElement();
+            WebElement target = targetElement.getElement();
+            logger.info("Execute: pressOnAndMoveTo("+sourceElement.getLogName()+","+targetElement.getLogName()+")");
+            TouchAction touchAction = new TouchAction(getDriver());
+            touchAction.press(source).moveTo(target).release().perform();
+        }catch (Exception ex){
+            logger.info("Fail to execute: pressOnAndMoveTo("+sourceElement.getLogName()+","+targetElement.getLogName()+")");
+            Assert.fail("Action failed!");
+        }
+
+    }
+
+    public static void pressOnAndMoveToNotVisibleElement(NativeElem sourceElement, LocatorType type, String locator) {
+
+        try{
+            logger.info("Execute: pressOnAndMoveToNotVisibleElement("+sourceElement.getLogName()+","+locator+")");
+            TouchAction touchAction = new TouchAction(getDriver());
+            touchAction.press(sourceElement.getElement()).perform();
+            NativeElem targetElement = new NativeElem(type,locator,locator);
+            touchAction.moveTo(targetElement.getElement()).release().perform();
+        }catch (Exception ex){
+            logger.info("Fail to execute: pressOnAndMoveToNotVisibleElement("+sourceElement.getLogName()+","+locator+")");
+            Assert.fail("Action failed!");
+        }
+
+    }
+
+    public void acceptAlert() {
+
+        try {
+            logger.info("Execute: acceptAlert("+logName+")");
+            NativeElem yes = new NativeElem(LocatorType.byName,"Yes","Yes");
+            yes.click();
+        }catch (Exception ex){
+            logger.info("Fail to execute: acceptAlert("+logName+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    public void closeAlert() {
+        try {
+            logger.info("Execute: closeAlert("+logName+")");
+            NativeElem no = new NativeElem(LocatorType.byName,"No","No");
+            no.click();
+        }catch (Exception ex){
+            logger.info("Fail to execute: closeAlert("+logName+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    public void scrollToExact(String text) {
+        try {
+            logger.info("Execute: scrollToExact("+text+")");
+            getDriver().scrollToExact(text);
+        }catch (Exception ex){
+            logger.info("Fail to execute: scrollToExact("+text+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    public void moveSliderTo(double procent) {
+
+        int xAxisStartPoint = getElement().getLocation().getX();
+        int xAxisEndPoint = xAxisStartPoint + getElement().getSize().getWidth();
+        int yAxis = getElement().getLocation().getY();
+        TouchAction act = new TouchAction(getDriver());
+        act.press(xAxisStartPoint,yAxis).moveTo((int) (xAxisEndPoint*procent),yAxis).release().perform();
 
     }
 }

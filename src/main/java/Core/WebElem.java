@@ -94,16 +94,20 @@ public class WebElem extends Element {
                 break;
             case byCSSList:
                 try {
-                    logger.info("Execute: findElement(By.cssSelector("+locator+")");
+                    logger.info("Execute: findElements(By.cssSelector("+locator+")");
                     this.elemList = getDriver().findElements(By.cssSelector(locator));
                 }catch (Exception ex){
-                    logger.info("Fail to execute: findElement(By.cssSelector("+locator+")");
+                    logger.info("Fail to execute: findElements(By.cssSelector("+locator+")");
                 }
                 this.logName = logName;
                 this.locator = locator;
         }
     }
 
+    /**
+     * Return number of elements pointed by css locator
+     * @return number
+     */
     public int size(){
         int number = 0;
         try {
@@ -117,7 +121,9 @@ public class WebElem extends Element {
     }
 
 
-
+    /**
+     * Click on element
+     */
     @Override
     public void click() {
         try {
@@ -129,6 +135,10 @@ public class WebElem extends Element {
         }
     }
 
+    /**
+     * Return text on element
+     * @return text
+     */
     @Override
     public String getText() {
         String elem = null;
@@ -142,6 +152,10 @@ public class WebElem extends Element {
         return elem;
     }
 
+    /**
+     * Send text to element
+     * @param text
+     */
     @Override
     public void sendKeys(String text) {
         try {
@@ -153,6 +167,10 @@ public class WebElem extends Element {
         }
     }
 
+    /**
+     * Sent key to element
+     * @param key
+     */
     @Override
     public void sendKeys(Keys key) {
         try {
@@ -164,7 +182,10 @@ public class WebElem extends Element {
         }
     }
 
-
+    /**
+     * Wait element to be visible in <b>timeout</b> milliseconds
+     * @param timeout
+     */
     @Override
     public void waitToBeVisible(int timeout) {
         try {
@@ -176,6 +197,10 @@ public class WebElem extends Element {
         }
     }
 
+    /**
+     * Wait element for <b>timeout</b> millisecond to be invisible
+     * @param timeout
+     */
     @Override
     public void waitToBeInvisible(int timeout) {
         try {
@@ -187,6 +212,9 @@ public class WebElem extends Element {
         }
     }
 
+    /**
+     * Clear the field
+     */
     @Override
     public void clear() {
         try {
@@ -199,6 +227,9 @@ public class WebElem extends Element {
 
     }
 
+    /**
+     * Submit the form
+     */
     public void submit() {
         try {
             logger.info("Execute: submit("+logName+")");
@@ -209,6 +240,10 @@ public class WebElem extends Element {
         }
     }
 
+    /**
+     * Wait <b>timeout</b> milliseconds for the element to be visible
+     * @param timeout
+     */
     public void waitListToBeVisible(int timeout) {
         try {
             logger.info("Execute: waitListToBeVisible("+logName+")");

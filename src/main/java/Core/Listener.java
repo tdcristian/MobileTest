@@ -19,6 +19,8 @@ import java.util.Date;
  */
 public class Listener extends Base implements ITestListener {
 
+
+
     public void onTestStart(ITestResult iTestResult) {
         try {
             logger.info("Test started on "+getMachineName()+" machine");
@@ -33,7 +35,9 @@ public class Listener extends Base implements ITestListener {
     }
 
     public void onTestFailure(ITestResult iTestResult) {
-        logger.info(">TestFail: "+iTestResult.getMethod().getMethodName());
+        logger.info(">TestFail: "+iTestResult.getMethod().getMethodName()+" on "+iTestResult.getTestClass().getName()+" class ");
+
+        Base.switchContentToNative();
         AppiumDriver driver = Base.getDriver();
         File location = new File("Screenshots");
         DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");

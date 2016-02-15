@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -159,7 +160,7 @@ public abstract class Base {
                 logger.info("context = " + context);
             }
             getDriver().context((String) contents.toArray()[0]);
-            contentName = (String) contents.toArray()[1];
+            contentName = (String) contents.toArray()[0];
             logger.info("Execute: switchContentToNative("+contents.toArray()[0]+")");
         }catch (Exception ex){
             logger.info("Fail to execute: switchContentToNative("+contentName+")");

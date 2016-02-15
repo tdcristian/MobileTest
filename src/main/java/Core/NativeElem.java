@@ -74,18 +74,33 @@ public class NativeElem extends Element {
 
     }
 
+    /**
+     * Return WebElement set by constructor
+     * @return WebElement
+     */
     public WebElement getElement() {
         return element;
     }
 
+    /**
+     * Return logName set by constructor
+     * @return logName
+     */
     public String getLogName() {
         return logName;
     }
 
+    /**
+     * Return locator set by constructor
+     * @return locator
+     */
     public String getLocator() {
         return locator;
     }
 
+    /**
+     * Click on element
+     */
     @Override
     public void click() {
         try {
@@ -97,6 +112,10 @@ public class NativeElem extends Element {
         }
     }
 
+    /**
+     * Return the text contain by element
+     * @return text
+     */
     @Override
     public String getText() {
         String elem = null;
@@ -110,6 +129,10 @@ public class NativeElem extends Element {
         return elem;
     }
 
+    /**
+     * Send text to element
+     * @param text
+     */
     @Override
     public void sendKeys(String text) {
         try {
@@ -121,6 +144,10 @@ public class NativeElem extends Element {
         }
     }
 
+    /**
+     * Send key to element
+     * @param key
+     */
     @Override
     public void sendKeys(Keys key) {
         try {
@@ -162,6 +189,9 @@ public class NativeElem extends Element {
         }
     }
 
+    /**
+     * Clear the field
+     */
     @Override
     public void clear() {
         try {
@@ -174,6 +204,9 @@ public class NativeElem extends Element {
 
     }
 
+    /**
+     * Long press an element
+     */
     public void longPress() {
 
         try {
@@ -186,6 +219,10 @@ public class NativeElem extends Element {
         }
     }
 
+    /**
+     * Scroll to text list element
+     * @param text
+     */
     public static void scrollTo(String text){
         try {
             logger.info("Execute: scrollTo("+text+")");
@@ -196,7 +233,11 @@ public class NativeElem extends Element {
         }
     }
 
-
+    /**
+     * Press on sourceElement and release it on targetElement. Both element should exist in page
+     * @param sourceElement
+     * @param targetElement
+     */
     public static void pressOnAndMoveTo(NativeElem sourceElement, NativeElem targetElement) {
 
         try {
@@ -212,6 +253,12 @@ public class NativeElem extends Element {
 
     }
 
+    /**
+     * Press on sourceElement and release it on element which is not displayed yet
+     * @param sourceElement
+     * @param type
+     * @param locator
+     */
     public static void pressOnAndMoveToNotVisibleElement(NativeElem sourceElement, LocatorType type, String locator) {
 
         try{
@@ -227,6 +274,9 @@ public class NativeElem extends Element {
 
     }
 
+    /**
+     * Accept alert
+     */
     public void acceptAlert() {
 
         try {
@@ -239,6 +289,9 @@ public class NativeElem extends Element {
         }
     }
 
+    /**
+     * Close alert
+     */
     public void closeAlert() {
         try {
             logger.info("Execute: closeAlert("+logName+")");
@@ -250,6 +303,10 @@ public class NativeElem extends Element {
         }
     }
 
+    /**
+     * Scroll to text in the spinner
+     * @param text
+     */
     public void scrollToExact(String text) {
         try {
             logger.info("Execute: scrollToExact("+text+")");
@@ -260,13 +317,17 @@ public class NativeElem extends Element {
         }
     }
 
-    public void moveSliderTo(double procent) {
+    /**
+     * Move slider to percent %
+     * @param percent
+     */
+    public void moveSliderTo(double percent) {
 
         int xAxisStartPoint = getElement().getLocation().getX();
         int xAxisEndPoint = xAxisStartPoint + getElement().getSize().getWidth();
         int yAxis = getElement().getLocation().getY();
         TouchAction act = new TouchAction(getDriver());
-        act.press(xAxisStartPoint,yAxis).moveTo((int) (xAxisEndPoint*procent),yAxis).release().perform();
+        act.press(xAxisStartPoint,yAxis).moveTo((int) (xAxisEndPoint*percent),yAxis).release().perform();
 
     }
 }

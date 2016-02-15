@@ -30,6 +30,7 @@ public class SpinnerTest extends Base {
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.0.1");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         caps.setCapability(MobileCapabilityType.DEVICE_NAME,"Android emulator");
+        caps.setCapability("avd","AVD_for_Nexus_5_API22");
         caps.setCapability("appPackage","com.android.androidui");
         caps.setCapability("appActivity","com.android.androidui.MainActivity");
         setDriver(caps);

@@ -24,12 +24,15 @@ public class AlertTest extends Base {
     @BeforeClass
     public void setUp() throws IOException, InterruptedException {
         super.setUp();
+
         File app = new File("src//main//resources//Apps//AndroidUI.apk");
+
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.APP,app);
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.0.1");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         caps.setCapability(MobileCapabilityType.DEVICE_NAME,"Android emulator");
+        caps.setCapability("avd","AVD_for_Nexus_5_API21");
         caps.setCapability("appPackage","com.android.androidui");
         caps.setCapability("appActivity","com.android.androidui.MainActivity");
 

@@ -26,7 +26,9 @@ public class SlideSeekBarTest extends Base {
         super.setUp();
 
         File app = new File("src//main//resources//Apps//AndroidUI.apk");
+
         DesiredCapabilities caps = new DesiredCapabilities();
+
         caps.setCapability(MobileCapabilityType.APP,app);
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.0.1");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");

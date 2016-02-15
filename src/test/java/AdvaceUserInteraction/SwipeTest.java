@@ -20,6 +20,7 @@ public class SwipeTest extends Base {
     @BeforeClass
     public void setUp() throws IOException, InterruptedException {
         super.setUp();
+
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.0.1");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
@@ -29,7 +30,6 @@ public class SwipeTest extends Base {
         caps.setCapability(MobileCapabilityType.APP_ACTIVITY,"com.android.contacts.activities.PeopleActivity");
 
         setDriver(caps);
-
         Base.implicitWait(30);
     }
 

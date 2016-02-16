@@ -24,7 +24,7 @@ public class SwipeTest extends Base {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.0.1");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"Android emulator");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"emulator-5554");
         caps.setCapability("avd","AVD_for_Nexus_5_API21");
         caps.setCapability(MobileCapabilityType.APP_PACKAGE,"com.android.contacts");
         caps.setCapability(MobileCapabilityType.APP_ACTIVITY,"com.android.contacts.activities.PeopleActivity");

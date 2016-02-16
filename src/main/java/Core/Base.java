@@ -30,8 +30,10 @@ public abstract class Base {
     public static org.apache.log4j.Logger logger;
 
     public static AndroidDriver setDriver(DesiredCapabilities caps) throws MalformedURLException, InterruptedException {
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps); // For local server
         Thread.sleep(7000);
+//        driver = new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"),caps); // For Grid
+
         return driver;
     }
 

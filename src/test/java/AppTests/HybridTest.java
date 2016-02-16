@@ -34,7 +34,7 @@ public class HybridTest extends Base{
         caps.setCapability(MobileCapabilityType.APP,app);
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.1.1");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"Android emulator");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"emulator-5556");
         caps.setCapability("avd","AVD_for_Nexus_5_API22");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME,"Appium");
         caps.setCapability(MobileCapabilityType.APP_PACKAGE,"com.example.testapp");

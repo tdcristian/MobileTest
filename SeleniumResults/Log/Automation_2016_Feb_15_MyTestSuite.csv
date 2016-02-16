@@ -369,3 +369,270 @@
 15 Feb 2016 15:57:27:536; >Success testing method: testEBayPage
 15 Feb 2016 15:57:27:538; $$$$ Test ended! $$$$
 15 Feb 2016 15:57:27:538; ----------------------------------------------------------------------------
+15 Feb 2016 16:18:38:024; ----------------------------------------------------------------------------
+15 Feb 2016 16:18:50:056; Test started on localhost.localdomain machine
+15 Feb 2016 16:18:50:056; >Start test method: testApplication
+15 Feb 2016 16:18:50:105; Execute: findElement(By.name(5)
+15 Feb 2016 16:18:50:235; Execute: findElement(By.name(+)
+15 Feb 2016 16:18:50:521; Execute: findElement(By.name(4)
+15 Feb 2016 16:18:50:820; Execute: findElementByAccessibilityId(equals)
+15 Feb 2016 16:18:50:907; Execute: findElement(By.id(com.android.calculator2:id/formula)
+15 Feb 2016 16:18:51:189; Execute: waitToBeVisible(five)
+15 Feb 2016 16:18:51:373; Execute: click(five)
+15 Feb 2016 16:18:51:787; Execute: click(plus)
+15 Feb 2016 16:18:52:461; Execute: click(four)
+15 Feb 2016 16:18:53:255; Execute: click(Equal)
+15 Feb 2016 16:18:53:906; Execute: getText(value)
+15 Feb 2016 16:18:55:159; >Success testing method: testApplication
+15 Feb 2016 16:18:55:161; $$$$ Test ended! $$$$
+15 Feb 2016 16:18:55:162; ----------------------------------------------------------------------------
+15 Feb 2016 16:19:27:598; ----------------------------------------------------------------------------
+15 Feb 2016 16:19:41:683; Test started on localhost.localdomain machine
+15 Feb 2016 16:19:41:684; >Start test method: testHybridApp
+15 Feb 2016 16:19:41:692; Execute: findElement(By.id(com.example.testapp:id/urlField)
+15 Feb 2016 16:19:41:726; Execute: findElement(By.id(com.example.testapp:id/goButton)
+15 Feb 2016 16:19:41:751; Execute: waitToBeVisible(urlField)
+15 Feb 2016 16:19:41:781; Execute: waitToBeVisible(goButton)
+15 Feb 2016 16:19:41:801; Execute: sendKeys( urlField)
+15 Feb 2016 16:19:46:977; Execute: click(goButton)
+15 Feb 2016 16:19:48:060; context = NATIVE_APP
+15 Feb 2016 16:19:48:060; context = WEBVIEW_com.example.testapp
+15 Feb 2016 16:19:53:782; Execute: switchContentToWeb(WEBVIEW_com.example.testapp)
+15 Feb 2016 16:19:53:783; Execute: hideKeyboard()
+15 Feb 2016 16:19:55:005; Execute: findElement(By.name(q)
+15 Feb 2016 16:19:55:476; Execute: waitToBeVisible(searchField)
+15 Feb 2016 16:19:55:560; Execute: sendKeys(searchField)
+15 Feb 2016 16:19:57:270; Execute: sendKeys( searchField)
+15 Feb 2016 16:20:01:185; context = NATIVE_APP
+15 Feb 2016 16:20:01:186; context = WEBVIEW_com.example.testapp
+15 Feb 2016 16:20:01:309; Execute: switchContentToNative(NATIVE_APP)
+15 Feb 2016 16:20:01:309; Execute: clear(urlField)
+15 Feb 2016 16:20:07:225; Execute: waitToBeVisible(urlField)
+15 Feb 2016 16:20:07:266; Execute: waitToBeVisible(goButton)
+15 Feb 2016 16:20:07:291; Execute: sendKeys( urlField)
+15 Feb 2016 16:20:12:488; Execute: click(goButton)
+15 Feb 2016 16:20:13:358; context = NATIVE_APP
+15 Feb 2016 16:20:13:359; context = WEBVIEW_com.example.testapp
+15 Feb 2016 16:20:18:994; Execute: switchContentToWeb(WEBVIEW_com.example.testapp)
+15 Feb 2016 16:20:18:995; Execute: findElement(By.name(q)
+15 Feb 2016 16:20:19:250; Execute: waitToBeVisible(searchField)
+15 Feb 2016 16:20:19:351; Execute: sendKeys(searchField)
+15 Feb 2016 16:20:20:980; Execute: sendKeys( searchField)
+15 Feb 2016 16:20:22:451; >Success testing method: testHybridApp
+15 Feb 2016 16:20:22:454; $$$$ Test ended! $$$$
+15 Feb 2016 16:20:22:455; ----------------------------------------------------------------------------
+15 Feb 2016 16:21:00:461; ----------------------------------------------------------------------------
+15 Feb 2016 16:21:04:870; Test started on localhost.localdomain machine
+15 Feb 2016 16:21:04:871; >Start test method: testEBayPage
+15 Feb 2016 16:21:39:719; ----------------------------------------------------------------------------
+15 Feb 2016 16:21:53:594; Test started on localhost.localdomain machine
+15 Feb 2016 16:21:53:595; >Start test method: testEBayPage
+15 Feb 2016 16:21:56:805; Execute: findElement(By.id(kw)
+15 Feb 2016 16:21:59:133; Execute: waitToBeVisible(searchBox)
+15 Feb 2016 16:21:59:204; Execute: sendKeys(searchBox)
+15 Feb 2016 16:22:00:580; Execute: submit(searchBox)
+15 Feb 2016 16:22:04:606; Execute: findElement(By.cssSelector(a.homeicon)
+15 Feb 2016 16:22:07:310; Execute: findElements(By.cssSelector(div#itemDiv a)
+15 Feb 2016 16:22:07:592; Execute: waitListToBeVisible(numberOfResults)
+15 Feb 2016 16:22:07:765; Execute: size(numberOfResults)
+15 Feb 2016 16:22:07:769; Execute: click(homeButton)
+15 Feb 2016 16:22:10:827; >Success testing method: testEBayPage
+15 Feb 2016 16:22:10:829; $$$$ Test ended! $$$$
+15 Feb 2016 16:22:10:829; ----------------------------------------------------------------------------
+15 Feb 2016 16:25:32:391; ----------------------------------------------------------------------------
+15 Feb 2016 16:26:12:786; Test started on localhost.localdomain machine
+15 Feb 2016 16:26:12:786; >Start test method: testSeekBar
+15 Feb 2016 16:26:12:794; Execute: findElement(By.id(com.android.androidui:id/seekBar1)
+15 Feb 2016 16:26:13:807; >Success testing method: testSeekBar
+15 Feb 2016 16:26:13:809; $$$$ Test ended! $$$$
+15 Feb 2016 16:26:13:809; ----------------------------------------------------------------------------
+15 Feb 2016 18:15:47:347; ----------------------------------------------------------------------------
+15 Feb 2016 18:16:01:506; Test started on localhost.localdomain machine
+15 Feb 2016 18:16:01:507; >Start test method: testDial
+15 Feb 2016 20:42:06:331; ----------------------------------------------------------------------------
+15 Feb 2016 20:42:17:993; Test started on localhost.localdomain machine
+15 Feb 2016 20:42:17:994; >Start test method: testDial
+15 Feb 2016 20:44:14:340; ----------------------------------------------------------------------------
+15 Feb 2016 20:44:25:265; Test started on localhost.localdomain machine
+15 Feb 2016 20:44:25:267; >Start test method: testDial
+15 Feb 2016 20:51:58:467; ----------------------------------------------------------------------------
+15 Feb 2016 20:52:08:820; Test started on localhost.localdomain machine
+15 Feb 2016 20:52:08:821; >Start test method: testDial
+15 Feb 2016 21:03:23:035; ----------------------------------------------------------------------------
+15 Feb 2016 21:03:33:589; Test started on localhost.localdomain machine
+15 Feb 2016 21:03:33:590; >Start test method: testDial
+15 Feb 2016 21:04:17:705; ----------------------------------------------------------------------------
+15 Feb 2016 21:04:20:497; Test started on localhost.localdomain machine
+15 Feb 2016 21:04:20:498; >Start test method: testDial
+15 Feb 2016 21:14:53:468; ----------------------------------------------------------------------------
+15 Feb 2016 21:15:03:901; Test started on localhost.localdomain machine
+15 Feb 2016 21:15:03:903; >Start test method: testDial
+15 Feb 2016 21:18:18:547; ----------------------------------------------------------------------------
+15 Feb 2016 21:18:29:000; Test started on localhost.localdomain machine
+15 Feb 2016 21:18:29:001; >Start test method: testDial
+15 Feb 2016 21:22:06:399; ----------------------------------------------------------------------------
+15 Feb 2016 21:22:16:794; Test started on localhost.localdomain machine
+15 Feb 2016 21:22:16:796; >Start test method: testDial
+15 Feb 2016 21:24:23:105; ----------------------------------------------------------------------------
+15 Feb 2016 21:24:33:479; Test started on localhost.localdomain machine
+15 Feb 2016 21:24:33:479; >Start test method: testDial
+15 Feb 2016 21:28:03:865; ----------------------------------------------------------------------------
+15 Feb 2016 21:28:17:502; Test started on localhost.localdomain machine
+15 Feb 2016 21:28:17:502; >Start test method: testDial
+15 Feb 2016 21:28:17:511; Execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 21:28:17:586; Execute: click(dialPad)
+15 Feb 2016 21:28:17:821; Execute: findElementByAccessibilityId(0)
+15 Feb 2016 21:28:18:897; Execute: waitToBeVisible(zero)
+15 Feb 2016 21:28:20:813; Execute: longPress(zero)
+15 Feb 2016 21:28:21:961; Execute: findElementByClassName(android.widget.EditText)
+15 Feb 2016 21:28:23:476; Execute: waitToBeVisible(plus)
+15 Feb 2016 21:28:23:497; Execute: getText(plus)
+15 Feb 2016 21:28:23:531; >Success testing method: testDial
+15 Feb 2016 21:28:23:533; $$$$ Test ended! $$$$
+15 Feb 2016 21:28:23:534; ----------------------------------------------------------------------------
+15 Feb 2016 21:35:15:623; ----------------------------------------------------------------------------
+15 Feb 2016 21:35:29:332; Test started on localhost.localdomain machine
+15 Feb 2016 21:35:29:335; >Start test method: testDial
+15 Feb 2016 21:35:29:351; Execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 21:35:29:790; Execute: click(dialPad)
+15 Feb 2016 21:35:30:163; Execute: findElementByAccessibilityId(0)
+15 Feb 2016 21:35:31:482; Execute: waitToBeVisible(zero)
+15 Feb 2016 21:35:32:006; Execute: longPress(zero)
+15 Feb 2016 21:35:36:234; Execute: findElementByClassName(android.widget.EditText)
+15 Feb 2016 21:35:37:150; Execute: waitToBeVisible(plus)
+15 Feb 2016 21:35:37:181; Execute: getText(plus)
+15 Feb 2016 21:35:37:298; >TestFail: testDial on AdvaceUserInteraction.LongPressTest class 
+15 Feb 2016 21:35:37:379; context = NATIVE_APP
+15 Feb 2016 21:35:37:459; Execute: switchContentToNative(NATIVE_APP)
+15 Feb 2016 21:35:39:291; $$$$ Test ended! $$$$
+15 Feb 2016 21:35:39:291; ----------------------------------------------------------------------------
+15 Feb 2016 21:37:38:220; ----------------------------------------------------------------------------
+15 Feb 2016 21:37:52:007; Test started on localhost.localdomain machine
+15 Feb 2016 21:37:52:009; >Start test method: testDial
+15 Feb 2016 21:37:52:016; Execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 21:37:52:145; Execute: click(dialPad)
+15 Feb 2016 21:37:52:452; Execute: findElementByAccessibilityId(0)
+15 Feb 2016 21:37:53:568; Execute: waitToBeVisible(zero)
+15 Feb 2016 21:37:54:063; Execute: longPress(zero)
+15 Feb 2016 21:37:55:803; Execute: findElementByClassName(android.widget.EditText)
+15 Feb 2016 21:37:55:960; Execute: waitToBeVisible(plus)
+15 Feb 2016 21:37:56:591; Execute: getText(plus)
+15 Feb 2016 21:37:56:697; >Success testing method: testDial
+15 Feb 2016 21:37:56:700; $$$$ Test ended! $$$$
+15 Feb 2016 21:37:56:702; ----------------------------------------------------------------------------
+15 Feb 2016 21:49:16:514; ----------------------------------------------------------------------------
+15 Feb 2016 21:49:30:020; Test started on localhost.localdomain machine
+15 Feb 2016 21:49:30:021; >Start test method: testDial
+15 Feb 2016 21:49:30:030; Execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 21:49:30:106; Execute: click(dialPad)
+15 Feb 2016 21:49:30:412; Execute: findElementByAccessibilityId(0)
+15 Feb 2016 21:49:31:529; Execute: waitToBeVisible(zero)
+15 Feb 2016 21:49:32:051; Execute: longPress(zero)
+15 Feb 2016 21:49:33:638; Execute: findElementByClassName(android.widget.EditText)
+15 Feb 2016 21:49:33:803; Execute: waitToBeVisible(plus)
+15 Feb 2016 21:49:34:094; Execute: getText(plus)
+15 Feb 2016 21:49:34:258; >Success testing method: testDial
+15 Feb 2016 21:49:34:259; $$$$ Test ended! $$$$
+15 Feb 2016 21:49:34:259; ----------------------------------------------------------------------------
+15 Feb 2016 21:50:12:837; ----------------------------------------------------------------------------
+15 Feb 2016 21:50:26:037; Test started on localhost.localdomain machine
+15 Feb 2016 21:50:26:037; >Start test method: testApplication
+15 Feb 2016 21:50:26:045; Execute: findElement(By.name(5)
+15 Feb 2016 21:50:26:123; Execute: findElement(By.name(+)
+15 Feb 2016 21:50:26:186; Execute: findElement(By.name(4)
+15 Feb 2016 21:50:26:237; Execute: findElementByAccessibilityId(equals)
+15 Feb 2016 21:50:26:268; Execute: findElement(By.id(com.android.calculator2:id/formula)
+15 Feb 2016 21:50:26:327; Execute: waitToBeVisible(five)
+15 Feb 2016 21:50:26:365; Execute: click(five)
+15 Feb 2016 21:50:26:599; Execute: click(plus)
+15 Feb 2016 21:50:27:308; Execute: click(four)
+15 Feb 2016 21:50:28:046; Execute: click(Equal)
+15 Feb 2016 21:50:28:694; Execute: getText(value)
+15 Feb 2016 21:50:29:820; >Success testing method: testApplication
+15 Feb 2016 21:50:29:822; $$$$ Test ended! $$$$
+15 Feb 2016 21:50:29:822; ----------------------------------------------------------------------------
+15 Feb 2016 21:57:02:228; ----------------------------------------------------------------------------
+15 Feb 2016 21:57:15:951; Test started on localhost.localdomain machine
+15 Feb 2016 21:57:15:951; >Start test method: testDial
+15 Feb 2016 21:57:56:994; ----------------------------------------------------------------------------
+15 Feb 2016 21:58:11:103; Test started on localhost.localdomain machine
+15 Feb 2016 21:58:11:103; >Start test method: testDial
+15 Feb 2016 21:58:55:599; ----------------------------------------------------------------------------
+15 Feb 2016 21:59:08:666; Test started on localhost.localdomain machine
+15 Feb 2016 21:59:08:667; >Start test method: testApplication
+15 Feb 2016 21:59:34:462; ----------------------------------------------------------------------------
+15 Feb 2016 21:59:46:984; Test started on localhost.localdomain machine
+15 Feb 2016 21:59:46:985; >Start test method: testApplication
+15 Feb 2016 21:59:46:991; Execute: findElement(By.name(5)
+15 Feb 2016 21:59:47:061; Fail to execute: findElement(By.name(5)
+15 Feb 2016 21:59:47:062; Execute: findElement(By.name(+)
+15 Feb 2016 21:59:47:086; Fail to execute: findElement(By.name(+)
+15 Feb 2016 21:59:47:086; Execute: findElement(By.name(4)
+15 Feb 2016 21:59:47:130; Fail to execute: findElement(By.name(4)
+15 Feb 2016 21:59:47:131; Execute: findElementByAccessibilityId(equals)
+15 Feb 2016 21:59:47:156; Fail to execute: findElementByAccessibilityId(equals)
+15 Feb 2016 21:59:47:156; Execute: findElement(By.id(com.android.calculator2:id/formula)
+15 Feb 2016 21:59:47:175; Fail to execute: findElement(By.id(com.android.calculator2:id/formula)
+15 Feb 2016 21:59:47:176; Execute: waitToBeVisible(five)
+15 Feb 2016 21:59:47:186; Fail to execute: waitToBeVisible(five)
+15 Feb 2016 21:59:47:201; >TestFail: testApplication on AppTests.AppTest class 
+15 Feb 2016 21:59:47:236; Fail to execute: switchContentToNative(null)
+15 Feb 2016 21:59:47:237; >TestFail: testApplication on AppTests.AppTest class 
+15 Feb 2016 21:59:47:258; Fail to execute: switchContentToNative(null)
+15 Feb 2016 21:59:47:259; $$$$ Test ended! $$$$
+15 Feb 2016 21:59:47:278; ----------------------------------------------------------------------------
+15 Feb 2016 22:02:31:167; ----------------------------------------------------------------------------
+15 Feb 2016 22:02:44:365; Test started on localhost.localdomain machine
+15 Feb 2016 22:02:44:365; >Start test method: testDial
+15 Feb 2016 22:02:44:378; Execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 22:02:44:462; Execute: click(dialPad)
+15 Feb 2016 22:02:44:760; Execute: findElementByAccessibilityId(0)
+15 Feb 2016 22:02:45:902; Execute: waitToBeVisible(zero)
+15 Feb 2016 22:02:46:584; Execute: longPress(zero)
+15 Feb 2016 22:02:48:033; Execute: findElementByClassName(android.widget.EditText)
+15 Feb 2016 22:02:48:424; Execute: waitToBeVisible(plus)
+15 Feb 2016 22:02:48:562; Execute: getText(plus)
+15 Feb 2016 22:02:49:019; >Success testing method: testDial
+15 Feb 2016 22:02:49:039; $$$$ Test ended! $$$$
+15 Feb 2016 22:02:49:039; ----------------------------------------------------------------------------
+15 Feb 2016 22:10:03:181; ----------------------------------------------------------------------------
+15 Feb 2016 22:10:16:717; Test started on localhost.localdomain machine
+15 Feb 2016 22:10:16:718; >Start test method: testDial
+15 Feb 2016 22:12:12:171; ----------------------------------------------------------------------------
+15 Feb 2016 22:12:27:285; Test started on localhost.localdomain machine
+15 Feb 2016 22:12:27:286; >Start test method: testDial
+15 Feb 2016 22:53:14:319; ----------------------------------------------------------------------------
+15 Feb 2016 22:53:29:564; Test started on localhost.localdomain machine
+15 Feb 2016 22:53:29:565; >Start test method: testDial
+15 Feb 2016 22:56:49:578; ----------------------------------------------------------------------------
+15 Feb 2016 22:57:03:867; Test started on localhost.localdomain machine
+15 Feb 2016 22:57:03:868; >Start test method: testDial
+15 Feb 2016 23:02:45:499; ----------------------------------------------------------------------------
+15 Feb 2016 23:02:59:358; Test started on localhost.localdomain machine
+15 Feb 2016 23:02:59:359; >Start test method: testDial
+15 Feb 2016 23:04:50:447; ----------------------------------------------------------------------------
+15 Feb 2016 23:05:03:788; Test started on localhost.localdomain machine
+15 Feb 2016 23:05:03:788; >Start test method: testDial
+15 Feb 2016 23:05:03:805; Execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 23:05:03:853; Fail to execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 23:05:03:854; Execute: click(dialPad)
+15 Feb 2016 23:05:03:854; Fail to execute click(dialPad)
+15 Feb 2016 23:05:03:859; >TestFail: testDial on AdvaceUserInteraction.LongPressTest class 
+15 Feb 2016 23:05:03:889; Fail to execute: switchContentToNative(null)
+15 Feb 2016 23:05:03:890; >TestFail: testDial on AdvaceUserInteraction.LongPressTest class 
+15 Feb 2016 23:05:03:929; Fail to execute: switchContentToNative(null)
+15 Feb 2016 23:05:03:945; $$$$ Test ended! $$$$
+15 Feb 2016 23:05:03:946; ----------------------------------------------------------------------------
+15 Feb 2016 23:14:26:029; ----------------------------------------------------------------------------
+15 Feb 2016 23:14:39:436; Test started on localhost.localdomain machine
+15 Feb 2016 23:14:39:437; >Start test method: testDial
+15 Feb 2016 23:14:39:444; Execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 23:14:39:495; Fail to execute: findElementByAccessibilityId(dial pad)
+15 Feb 2016 23:14:39:495; Execute: click(dialPad)
+15 Feb 2016 23:14:39:495; Fail to execute click(dialPad)
+15 Feb 2016 23:14:39:499; >TestFail: testDial on AdvaceUserInteraction.LongPressTest class 
+15 Feb 2016 23:14:39:519; Fail to execute: switchContentToNative(null)
+15 Feb 2016 23:14:39:520; >TestFail: testDial on AdvaceUserInteraction.LongPressTest class 
+15 Feb 2016 23:14:39:544; Fail to execute: switchContentToNative(null)
+15 Feb 2016 23:14:39:545; $$$$ Test ended! $$$$
+15 Feb 2016 23:14:39:545; ----------------------------------------------------------------------------

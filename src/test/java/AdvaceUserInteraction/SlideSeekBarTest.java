@@ -32,7 +32,7 @@ public class SlideSeekBarTest extends Base {
         caps.setCapability(MobileCapabilityType.APP,app);
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,"5.0.1");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"Android emulator");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"emulator-5554");
         caps.setCapability("avd","AVD_for_Nexus_5_API21");
         caps.setCapability("appPackage","com.android.androidui");
         caps.setCapability("appActivity","com.android.androidui.MainActivity");

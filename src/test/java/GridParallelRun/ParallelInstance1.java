@@ -39,12 +39,12 @@ public class ParallelInstance1 extends Base {
 
         WebElement five = driver.findElementByName("5");
         WebElement plus = driver.findElementByName("+");
-        WebElement four = driver.findElementByName("4");
+        WebElement one = driver.findElementByName("1");
         WebElement equals = driver.findElementByAccessibilityId("equals");
 
         five.click();
         plus.click();
-        four.click();
+        one.click();
         equals.click();
 
 

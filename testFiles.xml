@@ -3,13 +3,13 @@
 
     <test name="T_01">
         <classes>
-            <class name="AdvaceUserInteraction.LongPressTest" ></class>
+            <class name="GridParallelRun.ParallelInstance1" ></class>
         </classes>
     </test>
 
     <test name="T_02">
         <classes>
-            <class name="AppTests.AppTest" ></class>
+            <class name="GridParallelRun.ParallelInstance2" ></class>
         </classes>
     </test>
 

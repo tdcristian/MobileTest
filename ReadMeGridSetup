@@ -13,7 +13,7 @@ appium_node_api21.json
 {
      "capabilities": [
          {
-		"browserName": "Android",
+		"browserName": "Browser",
 		"version":"5.0.1",
 		"maxInstances": 3,
 		"platform":"ANDROID",
@@ -41,7 +41,7 @@ appium_node_api22.json
 {
      "capabilities": [
          {
-		"browserName": "Android",
+		"browserName": "Browser",
 		"version":"5.1.1",
 		"maxInstances": 3,
 		"platform":"ANDROID",

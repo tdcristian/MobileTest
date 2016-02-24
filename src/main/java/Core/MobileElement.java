@@ -87,6 +87,16 @@ public class MobileElement extends Base {
                 this.logName = logName;
                 this.locator = locator;
                 break;
+            case byClassName:
+                try {
+                    logger.info("Execute: findElement(By.className("+locator+")");
+                    this.element = getDriver().findElement(By.className(locator));
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElement(By.className("+locator+")");
+                }
+                this.logName = logName;
+                this.locator = locator;
+                break;
             case byXPath:
                 try {
                     logger.info("Execute: findElement(By.xpath("+locator+")");

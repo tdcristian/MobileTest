@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class Base {
 
     protected static AndroidDriver driver;
-    public static org.apache.log4j.Logger logger;
+    protected static org.apache.log4j.Logger logger;
 
     public static AndroidDriver setDriver(DesiredCapabilities caps) throws MalformedURLException, InterruptedException {
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps); // For local server

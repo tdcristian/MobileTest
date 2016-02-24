@@ -55,7 +55,6 @@ public class HybridTest extends Base {
     public void testHybridApp() {
         TestAppHomePage testAppHomePage = new TestAppHomePage();
         testAppHomePage.navigateToURL("http://www.google.com");
-        Base.implicitWait(30);
         Base.switchContentToWeb();
         Base.hideKeyboard();
 

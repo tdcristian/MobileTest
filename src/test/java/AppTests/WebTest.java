@@ -51,7 +51,6 @@ public class WebTest extends Base {
     public void testEBayPage() throws MalformedURLException, InterruptedException {
 
         driver.get("http://m.ebay.de");
-        Base.implicitWait(15);
         EBayHomePage homePage = new EBayHomePage();
         homePage.searchFor("Nexus 5");
         SearchResultEBayPage resultEBayPage = new SearchResultEBayPage();

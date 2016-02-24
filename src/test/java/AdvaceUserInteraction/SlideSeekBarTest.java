@@ -1,10 +1,8 @@
 package AdvaceUserInteraction;
 
 import Core.Base;
-import Core.Element;
 import Core.Listener;
-import Core.NativeElem;
-import io.appium.java_client.TouchAction;
+import Core.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -50,7 +48,7 @@ public class SlideSeekBarTest extends Base {
     @Test
     public void testSeekBar(){
 
-        NativeElem slider = new NativeElem(Element.LocatorType.byId,"com.android.androidui:id/seekBar1","SlideSeekBar");
+        MobileElement slider = new MobileElement(MobileElement.LocatorType.byId,"com.android.androidui:id/seekBar1","SlideSeekBar");
         slider.moveSliderTo(0.5);
         slider.moveSliderTo(0.2);
     }

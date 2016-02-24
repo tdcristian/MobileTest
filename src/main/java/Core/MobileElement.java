@@ -1,5 +1,6 @@
 package Core;
 
+import io.appium.java_client.TouchAction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,16 +11,20 @@ import org.testng.Assert;
 import java.util.List;
 
 /**
- * Created by tescu on 2/2/16.
+ * Created by tescu on 2/24/16.
  */
-public class WebElem extends Element {
+public class MobileElement extends Base {
+
+    public  enum LocatorType {
+        byId, byName, byCss, byAccessibilityId, byXPath, byLinkText, byPartialLinkText, byTagName, byClassName, byCSSList;
+    }
 
     private WebElement element;
-    private List<WebElem> elemList;
+    private List<MobileElement> elemList;
     private String logName;
     private String locator;
 
-    public WebElem(LocatorType locatorType, String locator, String logName) {
+    public MobileElement(LocatorType locatorType, String locator, String logName) {
 
         switch (locatorType){
             case byId:
@@ -92,6 +97,16 @@ public class WebElem extends Element {
                 this.logName = logName;
                 this.locator = locator;
                 break;
+            case byAccessibilityId:
+                try {
+                    logger.info("Execute: findElementByAccessibilityId("+locator+")");
+                    this.element = getDriver().findElementByAccessibilityId(locator);
+                }catch (Exception ex){
+                    logger.info("Fail to execute: findElementByAccessibilityId("+locator+")");
+                }
+                this.logName = logName;
+                this.locator = locator;
+                break;
             case byCSSList:
                 try {
                     logger.info("Execute: findElements(By.cssSelector("+locator+")");
@@ -103,6 +118,31 @@ public class WebElem extends Element {
                 this.locator = locator;
         }
     }
+
+    /**
+     * Return WebElement set by constructor
+     * @return WebElement
+     */
+    public WebElement getElement() {
+        return element;
+    }
+
+    /**
+     * Return logName set by constructor
+     * @return logName
+     */
+    public String getLogName() {
+        return logName;
+    }
+
+    /**
+     * Return locator set by constructor
+     * @return locator
+     */
+    public String getLocator() {
+        return locator;
+    }
+
 
     /**
      * Return number of elements pointed by css locator
@@ -124,7 +164,6 @@ public class WebElem extends Element {
     /**
      * Click on element
      */
-    @Override
     public void click() {
         try {
             logger.info("Execute: click("+logName+")");
@@ -139,7 +178,6 @@ public class WebElem extends Element {
      * Return text on element
      * @return text
      */
-    @Override
     public String getText() {
         String elem = null;
         try {
@@ -156,7 +194,6 @@ public class WebElem extends Element {
      * Send text to element
      * @param text
      */
-    @Override
     public void sendKeys(String text) {
         try {
             logger.info("Execute: sendKeys("+logName+")");
@@ -171,7 +208,6 @@ public class WebElem extends Element {
      * Sent key to element
      * @param key
      */
-    @Override
     public void sendKeys(Keys key) {
         try {
             logger.info("Execute: sendKeys( "+logName+")");
@@ -186,7 +222,6 @@ public class WebElem extends Element {
      * Wait element to be visible in <b>timeout</b> milliseconds
      * @param timeout
      */
-    @Override
     public void waitToBeVisible(int timeout) {
         try {
             logger.info("Execute: waitToBeVisible("+logName+")");
@@ -201,7 +236,6 @@ public class WebElem extends Element {
      * Wait element for <b>timeout</b> millisecond to be invisible
      * @param timeout
      */
-    @Override
     public void waitToBeInvisible(int timeout) {
         try {
             logger.info("Execute: waitToBeInvisible("+logName+")");
@@ -215,7 +249,6 @@ public class WebElem extends Element {
     /**
      * Clear the field
      */
-    @Override
     public void clear() {
         try {
             logger.info("Execute: clear( "+logName+")");
@@ -252,5 +285,132 @@ public class WebElem extends Element {
             logger.info("Fail to execute: waitListToBeVisible("+logName+")");
             Assert.fail("Action failed!");
         }
+    }
+
+    /**
+     * Long press an element
+     */
+    public void longPress() {
+
+        try {
+            logger.info("Execute: longPress("+logName+")");
+            TouchAction touchAction = new TouchAction(getDriver());
+            touchAction.longPress(element).perform();
+        }catch (Exception ex){
+            logger.info("Fail to execute: longPress("+logName+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    /**
+     * Scroll to text list element
+     * @param text
+     */
+    public static void scrollTo(String text){
+        try {
+            logger.info("Execute: scrollTo("+text+")");
+            getDriver().scrollTo(text);
+        }catch (Exception ex){
+            logger.info("Fail to execute: longPress("+text+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    /**
+     * Press on sourceElement and release it on targetElement. Both element should exist in page
+     * @param sourceElement
+     * @param targetElement
+     */
+    public static void pressOnAndMoveTo(MobileElement sourceElement, MobileElement targetElement) {
+
+        try {
+            WebElement source = sourceElement.getElement();
+            WebElement target = targetElement.getElement();
+            logger.info("Execute: pressOnAndMoveTo("+sourceElement.getLogName()+","+targetElement.getLogName()+")");
+            TouchAction touchAction = new TouchAction(getDriver());
+            touchAction.press(source).moveTo(target).release().perform();
+        }catch (Exception ex){
+            logger.info("Fail to execute: pressOnAndMoveTo("+sourceElement.getLogName()+","+targetElement.getLogName()+")");
+            Assert.fail("Action failed!");
+        }
+
+    }
+
+    /**
+     * Press on sourceElement and release it on element which is not displayed yet
+     * @param sourceElement
+     * @param type
+     * @param locator
+     */
+    public static void pressOnAndMoveToNotVisibleElement(MobileElement sourceElement, MobileElement.LocatorType type, String locator) {
+
+        try{
+            logger.info("Execute: pressOnAndMoveToNotVisibleElement("+sourceElement.getLogName()+","+locator+")");
+            TouchAction touchAction = new TouchAction(getDriver());
+            touchAction.press(sourceElement.getElement()).perform();
+            MobileElement targetElement = new MobileElement(type,locator,locator);
+            touchAction.moveTo(targetElement.getElement()).release().perform();
+        }catch (Exception ex){
+            logger.info("Fail to execute: pressOnAndMoveToNotVisibleElement("+sourceElement.getLogName()+","+locator+")");
+            Assert.fail("Action failed!");
+        }
+
+    }
+
+    /**
+     * Accept alert
+     */
+    public void acceptAlert() {
+
+        try {
+            logger.info("Execute: acceptAlert("+logName+")");
+            MobileElement yes = new MobileElement(MobileElement.LocatorType.byName,"Yes","Yes");
+            yes.click();
+        }catch (Exception ex){
+            logger.info("Fail to execute: acceptAlert("+logName+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    /**
+     * Close alert
+     */
+    public void closeAlert() {
+        try {
+            logger.info("Execute: closeAlert("+logName+")");
+            MobileElement no = new MobileElement(MobileElement.LocatorType.byName,"No","No");
+            no.click();
+        }catch (Exception ex){
+            logger.info("Fail to execute: closeAlert("+logName+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    /**
+     * Scroll to text in the spinner
+     * @param text
+     */
+    public void scrollToExact(String text) {
+        try {
+            logger.info("Execute: scrollToExact("+text+")");
+            getDriver().scrollToExact(text);
+        }catch (Exception ex){
+            logger.info("Fail to execute: scrollToExact("+text+")");
+            Assert.fail("Action failed!");
+        }
+    }
+
+    /**
+     * Move slider to percent %
+     * @param percent
+     */
+    public void moveSliderTo(double percent) {
+
+        int xAxisStartPoint = getElement().getLocation().getX();
+        int xAxisEndPoint = xAxisStartPoint + getElement().getSize().getWidth();
+        int yAxis = getElement().getLocation().getY();
+        TouchAction act = new TouchAction(getDriver());
+        act.press(xAxisStartPoint,yAxis).moveTo((int) (xAxisEndPoint*percent),yAxis).release().perform();
+
     }
 }

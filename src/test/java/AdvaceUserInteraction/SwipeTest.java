@@ -2,7 +2,7 @@ package AdvaceUserInteraction;
 
 import Core.Base;
 import Core.Listener;
-import Core.NativeElem;
+import Core.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -43,7 +43,7 @@ public class SwipeTest extends Base {
     @Test
     public void testSwipe()
     {
-        NativeElem.scrollTo("Nikita");
+        MobileElement.scrollTo("Nikita");
     }
 
 }

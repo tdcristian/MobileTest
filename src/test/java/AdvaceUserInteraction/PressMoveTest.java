@@ -1,9 +1,8 @@
 package AdvaceUserInteraction;
 
 import Core.Base;
-import Core.Element;
 import Core.Listener;
-import Core.NativeElem;
+import Core.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -44,10 +43,10 @@ public class PressMoveTest extends Base {
     @Test
     public void testPressMove(){
 
-        NativeElem delButton = new NativeElem(Element.LocatorType.byName,"del","delButton");
-        NativeElem digitSeven = new NativeElem(Element.LocatorType.byId,"com.android.calculator2:id/digit_7","digitSeven");
+        MobileElement delButton = new MobileElement(MobileElement.LocatorType.byName,"del","delButton");
+        MobileElement digitSeven = new MobileElement(MobileElement.LocatorType.byId,"com.android.calculator2:id/digit_7","digitSeven");
 
-        NativeElem.pressOnAndMoveTo(delButton,digitSeven);
+        MobileElement.pressOnAndMoveTo(delButton,digitSeven);
     }
 
 }

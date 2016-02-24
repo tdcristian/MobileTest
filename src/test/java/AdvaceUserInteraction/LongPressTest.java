@@ -1,9 +1,8 @@
 package AdvaceUserInteraction;
 
 import Core.Base;
-import Core.Element;
 import Core.Listener;
-import Core.NativeElem;
+import Core.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -45,12 +44,12 @@ public class LongPressTest extends Base {
     @Test
     public void testDial() {
 
-        NativeElem dialPad = new NativeElem(Element.LocatorType.byAccessibilityId,"dial pad","dialPad");
+        MobileElement dialPad = new MobileElement(MobileElement.LocatorType.byAccessibilityId,"dial pad","dialPad");
         dialPad.click();
-        NativeElem zero = new NativeElem(Element.LocatorType.byAccessibilityId,"0","zero");
+        MobileElement zero = new MobileElement(MobileElement.LocatorType.byAccessibilityId,"0","zero");
         zero.waitToBeVisible(30);
         zero.longPress();
-        NativeElem plus = new NativeElem(Element.LocatorType.byClassName,"android.widget.EditText","plus");
+        MobileElement plus = new MobileElement(MobileElement.LocatorType.byClassName,"android.widget.EditText","plus");
         plus.waitToBeVisible(30);
         Assert.assertEquals(plus.getText(),"+");
     }

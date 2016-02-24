@@ -1,16 +1,14 @@
 package pages;
 
-import Core.Base;
-import Core.Element;
-import Core.NativeElem;
+import Core.MobileElement;
 
 /**
  * Created by tescu on 2/9/16.
  */
 public class TestAppHomePage {
 
-    NativeElem urlField = new NativeElem(Element.LocatorType.byId,"com.example.testapp:id/urlField","urlField");
-    NativeElem goButton = new NativeElem(Element.LocatorType.byId,"com.example.testapp:id/goButton","goButton");
+    MobileElement urlField = new MobileElement(MobileElement.LocatorType.byId,"com.example.testapp:id/urlField","urlField");
+    MobileElement goButton = new MobileElement(MobileElement.LocatorType.byId,"com.example.testapp:id/goButton","goButton");
 
     public TestAppHomePage() {
 

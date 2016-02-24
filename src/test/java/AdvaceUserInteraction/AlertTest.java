@@ -1,9 +1,8 @@
 package AdvaceUserInteraction;
 
 import Core.Base;
-import Core.Element;
 import Core.Listener;
-import Core.NativeElem;
+import Core.MobileElement;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -51,7 +50,7 @@ public class AlertTest extends Base {
     @Test
     public void testAlert(){
 
-        NativeElem alert = new NativeElem(Element.LocatorType.byName,"Show Alert","alertElement");
+        MobileElement alert = new MobileElement(MobileElement.LocatorType.byName,"Show Alert","alertElement");
         alert.click();
         alert.closeAlert();
 

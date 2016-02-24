@@ -1,17 +1,15 @@
 package pages;
 
-import Core.Base;
-import Core.Element;
-import Core.WebElem;
+import Core.MobileElement;
 
 /**
  * Created by tescu on 2/8/16.
  */
 public class SearchResultEBayPage {
 
-    WebElem homeButton = new WebElem(Element.LocatorType.byCss,"a.homeicon","homeButton");
-//    WebElem list = new WebElem(Element.LocatorType.byCSSList,"div.stpFxht a","numberOfResults");
-    WebElem list = new WebElem(Element.LocatorType.byCSSList,"div#itemDiv a","numberOfResults");
+    MobileElement homeButton = new MobileElement(MobileElement.LocatorType.byCss,"a.homeicon","homeButton");
+//    MobileElement list = new MobileElement(MobileElement.LocatorType.byCSSList,"div.stpFxht a","numberOfResults");
+    MobileElement list = new MobileElement(MobileElement.LocatorType.byCSSList,"div#itemDiv a","numberOfResults");
 
     public SearchResultEBayPage() {
     }

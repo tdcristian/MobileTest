@@ -1,9 +1,8 @@
 package AdvaceUserInteraction;
 
 import Core.Base;
-import Core.Element;
 import Core.Listener;
-import Core.NativeElem;
+import Core.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -46,11 +45,11 @@ public class DragAndDropTest extends Base {
     @Test
     public void testDragAndDrop()
     {
-        NativeElem appIcon = new NativeElem(Element.LocatorType.byName,"Calculator","appIcon");
+        MobileElement appIcon = new MobileElement(MobileElement.LocatorType.byName,"Calculator","appIcon");
 
         String locatorElement = "Remove";
-        Element.LocatorType type = Element.LocatorType.byName;
-        NativeElem.pressOnAndMoveToNotVisibleElement(appIcon,type,locatorElement);
+        MobileElement.LocatorType type = MobileElement.LocatorType.byName;
+        MobileElement.pressOnAndMoveToNotVisibleElement(appIcon,type,locatorElement);
     }
 
 

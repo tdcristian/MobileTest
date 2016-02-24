@@ -1,9 +1,8 @@
 package AppTests;
 
 import Core.Base;
-import Core.Element;
 import Core.Listener;
-import Core.WebElem;
+import Core.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Keys;
@@ -58,7 +57,7 @@ public class HybridTest extends Base {
         Base.switchContentToWeb();
         Base.hideKeyboard();
 
-        WebElem searchFieldGoogle = new WebElem(Element.LocatorType.byName,"q","searchField");
+        MobileElement searchFieldGoogle = new MobileElement(MobileElement.LocatorType.byName,"q","searchField");
         searchFieldGoogle.waitToBeVisible(30);
         searchFieldGoogle.sendKeys("selenium");
         searchFieldGoogle.sendKeys(Keys.ENTER);
@@ -68,7 +67,7 @@ public class HybridTest extends Base {
         testAppHomePage.navigateToURL("http://www.bing.com");
         Base.switchContentToWeb();
 
-        WebElem searchFieldBing = new WebElem(Element.LocatorType.byName,"q","searchField");
+        MobileElement searchFieldBing = new MobileElement(MobileElement.LocatorType.byName,"q","searchField");
         searchFieldBing.waitToBeVisible(30);
         searchFieldBing.sendKeys("selenium");
         searchFieldBing.sendKeys(Keys.ENTER);

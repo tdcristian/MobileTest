@@ -1,9 +1,8 @@
 package AdvaceUserInteraction;
 
 import Core.Base;
-import Core.Element;
 import Core.Listener;
-import Core.NativeElem;
+import Core.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
@@ -47,9 +46,9 @@ public class SpinnerTest extends Base {
     @Test
     public void testSpinner(){
 
-        NativeElem spinner = new NativeElem(Element.LocatorType.byId,"android:id/text1","spinnerElement");
+        MobileElement spinner = new MobileElement(MobileElement.LocatorType.byId,"android:id/text1","spinnerElement");
         spinner.scrollToExact("India");
-        NativeElem option = new NativeElem(Element.LocatorType.byName,"India","option");
+        MobileElement option = new MobileElement(MobileElement.LocatorType.byName,"India","option");
         option.click();
     }
 }

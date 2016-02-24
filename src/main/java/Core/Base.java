@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeClass;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.UnknownHostException;
 import java.text.DateFormat;
@@ -39,7 +38,7 @@ public abstract class Base {
 
         if (environmentToRun.equals("Local")) {
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps); // For local server
-            Thread.sleep(7000);
+            Base.implicitWait(45);
         }
         else if (environmentToRun.equals("Grid")){
             driver = new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"),caps); // For Grid

@@ -28,12 +28,22 @@ public abstract class Base {
 
     protected static AndroidDriver driver;
     protected static org.apache.log4j.Logger logger;
+    private static String environmentToRun;
 
-    public static AndroidDriver setDriver(DesiredCapabilities caps) throws MalformedURLException, InterruptedException {
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps); // For local server
-        Thread.sleep(7000);
-//        driver = new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"),caps); // For Grid
+    public static AndroidDriver setDriver(DesiredCapabilities caps) throws IOException, InterruptedException {
 
+        Properties chooseEnvironment = new Properties();
+        InputStream inputStream = Base.class.getClassLoader().getResourceAsStream("automation.properties");
+        chooseEnvironment.load(inputStream);
+        environmentToRun = chooseEnvironment.getProperty("environmentToRun");
+
+        if (environmentToRun.equals("Local")) {
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps); // For local server
+            Thread.sleep(7000);
+        }
+        else if (environmentToRun.equals("Grid")){
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4444/wd/hub"),caps); // For Grid
+        }
         return driver;
     }
 
@@ -134,7 +144,6 @@ public abstract class Base {
             for (String context :contents) {
                 logger.info("context = " + context);
             }
-            Thread.sleep(4000);
             getDriver().context((String) contents.toArray()[1]);
             contentName = (String) contents.toArray()[1];
             logger.info("Execute: switchContentToWeb("+contents.toArray()[1]+")");

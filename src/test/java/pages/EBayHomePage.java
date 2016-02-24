@@ -7,7 +7,7 @@ import Core.WebElem;
 /**
  * Created by tescu on 2/8/16.
  */
-public class EBayHomePage extends Base {
+public class EBayHomePage {
 
     WebElem searchBox = new WebElem(Element.LocatorType.byId,"kw","searchBox");
 

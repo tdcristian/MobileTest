@@ -21,7 +21,7 @@ import java.io.IOException;
  * Created by tescu on 2/9/16.
  */
 @Listeners(Listener.class)
-public class HybridTest extends Base{
+public class HybridTest extends Base {
 
     AndroidDriver driver;
 

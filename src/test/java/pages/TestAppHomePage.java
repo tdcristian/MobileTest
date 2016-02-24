@@ -7,7 +7,7 @@ import Core.NativeElem;
 /**
  * Created by tescu on 2/9/16.
  */
-public class TestAppHomePage extends Base {
+public class TestAppHomePage {
 
     NativeElem urlField = new NativeElem(Element.LocatorType.byId,"com.example.testapp:id/urlField","urlField");
     NativeElem goButton = new NativeElem(Element.LocatorType.byId,"com.example.testapp:id/goButton","goButton");

@@ -56,7 +56,7 @@ public class WebTest extends Base {
         homePage.searchFor("Nexus 5");
         SearchResultEBayPage resultEBayPage = new SearchResultEBayPage();
         Assert.assertEquals(resultEBayPage.getNumberOfResults(),24);
-        resultEBayPage.goToGomePage();
+        resultEBayPage.goToHomePage();
 
     }
 

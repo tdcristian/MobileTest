@@ -16,7 +16,7 @@ public class SearchResultEBayPage extends Base  {
     public SearchResultEBayPage() {
     }
 
-    public void goToGomePage(){
+    public void goToHomePage(){
         homeButton.click();
     }
 

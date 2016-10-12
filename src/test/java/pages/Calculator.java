@@ -20,8 +20,8 @@ public class Calculator {
         System.out.println("element1.getLocator() = " + element1.getLocator());
         System.out.println("element2.getLocator() = " + element2.getLocator());
 
-        MobileElement.wait.until(element1.elementIsFoundById);
-        MobileElement.wait.until(equals.elementIsFoundByAccesibilityId);
+        MobileElement.wait.until(element1.isFoundById);
+        MobileElement.wait.until(equals.isFoundByAccesibilityId);
         
         element1.click();
         this.plus.click();

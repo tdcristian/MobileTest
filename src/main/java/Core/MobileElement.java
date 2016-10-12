@@ -319,7 +319,7 @@ public class MobileElement extends Base {
     /**
      * Find element by ID providing locator
      */
-    public Function<AndroidDriver, WebElement> elementIsFoundById = new Function<AndroidDriver, WebElement>() {
+    public Function<AndroidDriver, WebElement> isFoundById = new Function<AndroidDriver, WebElement>() {
         public WebElement apply(AndroidDriver input) {
             return input.findElementById(locator);
         }
@@ -328,7 +328,7 @@ public class MobileElement extends Base {
     /**
      * Find element by Accessibility Id providing locator 
      */
-    public Function<AndroidDriver, WebElement> elementIsFoundByAccesibilityId = new Function<AndroidDriver, 
+    public Function<AndroidDriver, WebElement> isFoundByAccesibilityId = new Function<AndroidDriver, 
             WebElement>() {
         public WebElement apply(AndroidDriver input) {
             return input.findElementByAccessibilityId(locator);

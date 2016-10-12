@@ -23,6 +23,9 @@ public class Calculator {
         MobileElement.wait.until(element1.isFoundById);
         MobileElement.wait.until(equals.isFoundByAccesibilityId);
         
+        element1.waitToBeVisible(15);
+        equals.waitToBeVisible(15);
+        
         element1.click();
         this.plus.click();
         element2.click();

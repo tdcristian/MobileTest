@@ -19,7 +19,7 @@ public class SearchResultEBayPage {
     }
 
     public int getNumberOfResults(){
-        list.waitListToBeVisible(30);
+        list.waitListToBeVisibleByCss(30);
         return list.size();
     }
 

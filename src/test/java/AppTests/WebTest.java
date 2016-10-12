@@ -1,20 +1,21 @@
 package AppTests;
 
-import Core.Base;
-import Core.Listener;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
+import java.io.IOException;
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import Core.Base;
+import Core.Listener;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 import pages.EBayHomePage;
 import pages.SearchResultEBayPage;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
 
 /**
  * Created by tescu on 2/8/16.
@@ -54,7 +55,7 @@ public class WebTest extends Base {
         EBayHomePage homePage = new EBayHomePage();
         homePage.searchFor("Nexus 5");
         SearchResultEBayPage resultEBayPage = new SearchResultEBayPage();
-        Assert.assertEquals(resultEBayPage.getNumberOfResults(),24);
+        Assert.assertEquals(resultEBayPage.getNumberOfResults(),26);
         resultEBayPage.goToHomePage();
 
     }

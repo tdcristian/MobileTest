@@ -1,17 +1,18 @@
 package AppTests;
 
+import java.io.IOException;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
 import Core.Base;
 import Core.Listener;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 import pages.Calculator;
-
-import java.io.IOException;
 
 
 /**
@@ -21,7 +22,7 @@ import java.io.IOException;
 @Listeners({Listener.class})
 public class AppTest extends Base {
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() throws IOException, InterruptedException {
         super.setUp();
 
@@ -33,12 +34,10 @@ public class AppTest extends Base {
         caps.setCapability(MobileCapabilityType.APP_PACKAGE,"com.android.calculator2");
         caps.setCapability(MobileCapabilityType.APP_ACTIVITY,"com.android.calculator2.Calculator");
         setDriver(caps);
-
-        Base.implicitWait(30);
-
+        
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown(){
         super.tearDown();
         getDriver().closeApp();
@@ -49,10 +48,18 @@ public class AppTest extends Base {
     public void testApplication(){
 
         Calculator calculator = new Calculator();
-        calculator.addNumbers(calculator.five,calculator.four);
-
+        calculator.addNumbers(calculator.four,calculator.five);
         Assert.assertEquals(calculator.value.getText(),"9");
     }
+
+
+    @Test
+    public void testApplication1(){
+        Calculator calculator = new Calculator();
+        calculator.addNumbers(calculator.five,calculator.four);
+        Assert.assertEquals(calculator.value.getText(),"9");
+    }
+
 
 
 }

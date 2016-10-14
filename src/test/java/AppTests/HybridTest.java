@@ -1,20 +1,21 @@
 package AppTests;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
 import Core.Base;
 import Core.Listener;
 import Core.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import pages.TestAppHomePage;
-
-import java.io.File;
-import java.io.IOException;
+import pages.HybridAppHomePage;
 
 /**
  * Created by tescu on 2/9/16.
@@ -24,7 +25,7 @@ public class HybridTest extends Base {
 
     AndroidDriver driver;
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() throws IOException, InterruptedException {
         super.setUp();
 
@@ -39,11 +40,9 @@ public class HybridTest extends Base {
         caps.setCapability(MobileCapabilityType.APP_PACKAGE,"com.example.testapp");
         caps.setCapability(MobileCapabilityType.APP_ACTIVITY,"com.example.testapp.MainActivity");
         setDriver(caps);
-        driver = getDriver();
-        Base.implicitWait(30);
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown(){
         super.tearDown();
         getDriver().closeApp();
@@ -52,8 +51,8 @@ public class HybridTest extends Base {
 
     @Test
     public void testHybridApp() {
-        TestAppHomePage testAppHomePage = new TestAppHomePage();
-        testAppHomePage.navigateToURL("http://www.google.com");
+        HybridAppHomePage hybridAppHomePage = new HybridAppHomePage();
+        hybridAppHomePage.navigateToURL("http://www.google.com");
         Base.switchContentToWeb();
         Base.hideKeyboard();
 
@@ -63,8 +62,8 @@ public class HybridTest extends Base {
         searchFieldGoogle.sendKeys(Keys.ENTER);
 
         Base.switchContentToNative();
-        testAppHomePage.clearURLField();
-        testAppHomePage.navigateToURL("http://www.bing.com");
+        hybridAppHomePage.clearURLField();
+        hybridAppHomePage.navigateToURL("http://www.bing.com");
         Base.switchContentToWeb();
 
         MobileElement searchFieldBing = new MobileElement(MobileElement.LocatorType.byName,"q","searchField");

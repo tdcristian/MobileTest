@@ -8,7 +8,6 @@ import Core.MobileElement;
 public class SearchResultEBayPage {
 
     MobileElement homeButton = new MobileElement(MobileElement.LocatorType.byCss,"a.homeicon","homeButton");
-//    MobileElement list = new MobileElement(MobileElement.LocatorType.byCSSList,"div.stpFxht a","numberOfResults");
     MobileElement list = new MobileElement(MobileElement.LocatorType.byCSSList,"div#itemDiv a","numberOfResults");
 
     public SearchResultEBayPage() {

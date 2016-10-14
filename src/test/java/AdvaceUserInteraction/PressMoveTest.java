@@ -1,16 +1,17 @@
 package AdvaceUserInteraction;
 
-import Core.Base;
-import Core.Listener;
-import Core.MobileElement;
-import io.appium.java_client.remote.MobileCapabilityType;
+import java.io.IOException;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import Core.Base;
+import Core.Listener;
+import Core.MobileElement;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 /**
  * Created by tescu on 2/11/16.
@@ -43,7 +44,7 @@ public class PressMoveTest extends Base {
     @Test
     public void testPressMove(){
 
-        MobileElement delButton = new MobileElement(MobileElement.LocatorType.byName,"del","delButton");
+        MobileElement delButton = new MobileElement(MobileElement.LocatorType.byAccessibilityId,"delete","delButton");
         MobileElement digitSeven = new MobileElement(MobileElement.LocatorType.byId,"com.android.calculator2:id/digit_7","digitSeven");
 
         MobileElement.pressOnAndMoveTo(delButton,digitSeven);

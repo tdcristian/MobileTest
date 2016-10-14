@@ -5,8 +5,8 @@ import java.net.MalformedURLException;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -25,7 +25,7 @@ public class WebTest extends Base {
 
     AndroidDriver driver;
 
-    @BeforeClass
+    @BeforeSuite
     public  void setUp() throws IOException, InterruptedException {
         super.setUp();
 
@@ -38,11 +38,9 @@ public class WebTest extends Base {
         caps.setCapability(MobileCapabilityType.BROWSER_NAME, "Browser");
         setDriver(caps);
         driver = getDriver();
-        Base.implicitWait(30);
-
     }
 
-    @AfterClass
+    @AfterSuite
     public  void tearDown(){
         super.tearDown();
         driver.quit();

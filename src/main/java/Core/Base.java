@@ -49,7 +49,7 @@ public abstract class Base {
     }
 
     /**
-     * @return driver
+     * @return driver - return android driver
      */
     public static AndroidDriver getDriver() {
         return driver;
@@ -107,13 +107,15 @@ public abstract class Base {
 
         PropertyConfigurator.configure(logConfiProps);
         logger.info("----------------------------------------------------------------------------");
+        logger.info("$$$$ Test started! $$$$");
+        logger.info("----------------------------------------------------------------------------");
         System.out.println("Logs saved in: " + logConfiProps.getProperty("log4j.appender.R.File"));
 
     }
 
     @AfterClass
     public void tearDown() {
-
+        logger.info("----------------------------------------------------------------------------");
         logger.info("$$$$ Test ended! $$$$");
         logger.info("----------------------------------------------------------------------------");
     }

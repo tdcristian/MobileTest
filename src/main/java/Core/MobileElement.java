@@ -481,7 +481,7 @@ public class MobileElement extends Base {
     public void closeAlert() {
         try {
             logger.info("Execute: closeAlert(" + logName + ")");
-            MobileElement no = new MobileElement(MobileElement.LocatorType.byName, "No", "No");
+            MobileElement no = new MobileElement(LocatorType.byId, "android:id/button2", "No");
             no.click();
         } catch (Exception ex) {
             logger.info("Fail to execute: closeAlert(" + logName + ")");

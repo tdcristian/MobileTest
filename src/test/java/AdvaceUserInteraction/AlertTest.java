@@ -1,18 +1,19 @@
 package AdvaceUserInteraction;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
 import Core.Base;
 import Core.Listener;
 import Core.MobileElement;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-
-import java.io.File;
-import java.io.IOException;
 
 /**
  * Created by tescu on 2/12/16.
@@ -20,7 +21,7 @@ import java.io.IOException;
 @Listeners(Listener.class)
 public class AlertTest extends Base {
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() throws IOException, InterruptedException {
         super.setUp();
 
@@ -37,10 +38,9 @@ public class AlertTest extends Base {
 
         setDriver(caps);
 
-        Base.implicitWait(30);
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown(){
         super.tearDown();
         getDriver().closeApp();
@@ -50,7 +50,8 @@ public class AlertTest extends Base {
     @Test
     public void testAlert(){
 
-        MobileElement alert = new MobileElement(MobileElement.LocatorType.byName,"Show Alert","alertElement");
+        MobileElement alert = new MobileElement(MobileElement.LocatorType.byId,"com.android.androidui:id/buttonAlert","alertElement");
+        alert.waitToBeVisible(15);
         alert.click();
         alert.closeAlert();
 

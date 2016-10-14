@@ -1,17 +1,18 @@
 package AdvaceUserInteraction;
 
-import Core.Base;
-import Core.Listener;
-import Core.MobileElement;
-import io.appium.java_client.remote.MobileCapabilityType;
+import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.io.IOException;
+import Core.Base;
+import Core.Listener;
+import Core.MobileElement;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 /**
  * Created by tescu on 2/12/16.
@@ -48,7 +49,8 @@ public class SpinnerTest extends Base {
 
         MobileElement spinner = new MobileElement(MobileElement.LocatorType.byId,"android:id/text1","spinnerElement");
         spinner.scrollToExact("India");
-        MobileElement option = new MobileElement(MobileElement.LocatorType.byName,"India","option");
+        MobileElement option = new MobileElement(MobileElement.LocatorType.byName,"India","India option");
+        option.waitToBeVisible(15);
         option.click();
     }
 }

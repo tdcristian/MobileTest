@@ -1,16 +1,17 @@
 package AdvaceUserInteraction;
 
-import Core.Base;
-import Core.Listener;
-import Core.MobileElement;
-import io.appium.java_client.remote.MobileCapabilityType;
+import java.io.IOException;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import Core.Base;
+import Core.Listener;
+import Core.MobileElement;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 /**
  * Created by tescu on 2/12/16.
@@ -45,10 +46,10 @@ public class DragAndDropTest extends Base {
     @Test
     public void testDragAndDrop()
     {
-        MobileElement appIcon = new MobileElement(MobileElement.LocatorType.byName,"Calculator","appIcon");
+        MobileElement appIcon = new MobileElement(MobileElement.LocatorType.byAccessibilityId,"Calendar","appIcon");
 
-        String locatorElement = "Remove";
-        MobileElement.LocatorType type = MobileElement.LocatorType.byName;
+        String locatorElement = "com.android.launcher:id/delete_target_text";
+        MobileElement.LocatorType type = MobileElement.LocatorType.byId;
         MobileElement.pressOnAndMoveToNotVisibleElement(appIcon,type,locatorElement);
     }
 
